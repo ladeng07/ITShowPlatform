@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@i80$q(g*+fof5(s2&^r#1=2+(@f=#=1$6!7&90=8v8lxg!y8h'
+SECRET_KEY = 'django-insecure-0cn#v4ei2(^n+txyh4%3d5sllz6mknz#7t$!cq-d!ly*_rwvh2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,8 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'enroll',
-    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +54,7 @@ ROOT_URLCONF = 'ITShowPlatform.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [os.path.join(BASE_DIR, 'templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -124,11 +122,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-EMAIL_HOST = "smtp.qq.com"  # 服务器
-EMAIL_PORT = 465
-EMAIL_HOST_USER = "2302253692@qq.com"  # 账号
-EMAIL_HOST_PASSWORD = "idujbpdlpgbmdhjg"  # 密码 (注意：这里的密码指的是授权码)
-EMAIL_USE_SSL = True  # 一般都为False
-EMAIL_FROM = "2302253692@qq.com"  # 邮箱来自
-
