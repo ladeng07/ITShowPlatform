@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'it.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'it_show',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
     }
 }
 
@@ -124,3 +128,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_HOST = "smtp.qq.com"  # 服务器
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "2302253692@qq.com"  # 账号
+EMAIL_HOST_PASSWORD = "idujbpdlpgbmdhjg"  # 密码 (注意：这里的密码指的是授权码)
+EMAIL_USE_SSL = True  # 一般都为False
+EMAIL_FROM = "2302253692@qq.com"  # 邮箱来自
