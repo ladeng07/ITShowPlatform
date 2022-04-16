@@ -45,10 +45,6 @@ class New_member_serializer(serializers.ModelSerializer):
 
         }
 
-    def validate_code(self, data):
-        print(f"email={self.email}")
-        return data
-
 
 class New_member_schedule_serializer(serializers.ModelSerializer):
     class Meta:
