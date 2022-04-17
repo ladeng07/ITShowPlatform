@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a8991b-db81-45ad-a784-7019e69d46a8" name="Default Changelist" comment="终于合并了55555" />
+    <list default="true" id="b4a8991b-db81-45ad-a784-7019e69d46a8" name="Default Changelist" comment="终于合并了55555">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +52,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Django/ITShowPlatform" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -93,7 +95,6 @@
       <workItem from="1649742318293" duration="171000" />
       <workItem from="1649742661732" duration="1951000" />
       <workItem from="1650181685676" duration="2318000" />
-      <workItem from="1650187198017" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="终于合并了55555">
       <created>1650182907589</created>
@@ -118,7 +119,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="终于合并了55555" />
