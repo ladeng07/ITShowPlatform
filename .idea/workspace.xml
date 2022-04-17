@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a8991b-db81-45ad-a784-7019e69d46a8" name="Default Changelist" comment="" />
+    <list default="true" id="b4a8991b-db81-45ad-a784-7019e69d46a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/IT_Show.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IT_Show.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITShowPlatform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITShowPlatform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT_Show/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT_Show/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT_Show/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT_Show/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT_Show/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/history/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/history/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/it/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/it/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/it/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/it/wsgi.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/ladeng07/ITShowPlatform.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="27gVdaxmdAgWTkdJi0m1Kt6d6va" />
   <component name="ProjectViewState">
@@ -16,7 +64,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IT_todo" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Django/IT_todo/IT_todo/urls.py" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="ITShowPlatform" type="Python.DjangoServer" factoryName="Django server">
@@ -56,17 +106,49 @@
       <workItem from="1649741931289" duration="319000" />
       <workItem from="1649742318293" duration="171000" />
       <workItem from="1649742661732" duration="1951000" />
+      <workItem from="1650181685676" duration="1020000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1649742697374">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1650182514476">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1649742697374" />
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1650182514476" />
+    <state width="1493" height="217" key="GridCell.Tab.0.bottom" timestamp="1650182676459">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="217" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1650182676459" />
+    <state width="1493" height="217" key="GridCell.Tab.0.center" timestamp="1650182676458">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="217" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1650182676458" />
+    <state width="1493" height="217" key="GridCell.Tab.0.left" timestamp="1650182676458">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="217" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1650182676458" />
+    <state width="1493" height="217" key="GridCell.Tab.0.right" timestamp="1650182676459">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="217" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1650182676459" />
+    <state x="270" y="76" key="SettingsEditor" timestamp="1650182715520">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="270" y="76" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1650182715520" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1649743958455">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

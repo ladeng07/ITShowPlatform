@@ -14,8 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path, include
+from django.views.static import serve
+from ITShowPlatform import settings
+from rest_framework import routers
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include('comments.urls')),
+    path('api/', include('history.urls')),
+    path(r'^api-auth/', include('rest_framework.urls')),
+    re_path(r'^media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}),
 ]

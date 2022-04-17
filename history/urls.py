@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 from django.conf.urls.static import static
-from IT_Show import settings
+from ITShowPlatform import settings
 
 urlpatterns = [
     path('history/', views.history.as_view()),
