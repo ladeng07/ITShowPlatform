@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
-
-from enroll.models import Department, New_member
+from enroll.models import Department, New_member, EmailVerifyRecord
 
 
 class Department_serializer(serializers.ModelSerializer):
@@ -56,6 +55,6 @@ class Send_email_serializer(serializers.Serializer):
     # code = serializers.CharField(max_length=10)
     email = serializers.EmailField(max_length=50,
                                    validators=[UniqueValidator(
-                                       queryset=New_member.objects.all(),
+                                       queryset=New_member.objects.all() and EmailVerifyRecord.objects.all(),
                                        message="该邮箱已存在")],
                                    error_messages={"max_length": "邮箱过长", "invalid": "请输入正确格式的邮箱"})

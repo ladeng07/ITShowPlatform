@@ -1,9 +1,8 @@
 from random import Random  # 用于生成随机码
 from django.core.mail import send_mail  # 发送邮件模块
 from enroll.models import EmailVerifyRecord  # 邮箱验证model
-from django.conf import settings    # setting.py添加的的配置信息
+from django.conf import settings  # setting.py添加的的配置信息
 import random
-import datetime
 
 
 # 生成随机字符串
@@ -36,7 +35,7 @@ def send_code_email(email, send_type="register"):
     email_record.code = code
     email_record.email = email
     # email_record.send_type = send_type
-    # email_record.send_time = datetime.datetime.now()
+    # email_record.send_time = time.time()
     email_record.save()
     # 初始化为空
     email_title = ""
