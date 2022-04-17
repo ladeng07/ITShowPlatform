@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4a8991b-db81-45ad-a784-7019e69d46a8" name="Default Changelist" comment="终于合并了55555">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,8 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Django/ITShowPlatform" />
-    <property name="restartRequiresConfirmation" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -81,6 +81,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -95,6 +96,10 @@
       <workItem from="1649742318293" duration="171000" />
       <workItem from="1649742661732" duration="1951000" />
       <workItem from="1650181685676" duration="2318000" />
+      <workItem from="1650186415092" duration="325000" />
+      <workItem from="1650186744791" duration="184000" />
+      <workItem from="1650186950510" duration="25000" />
+      <workItem from="1650187026232" duration="322000" />
     </task>
     <task id="LOCAL-00001" summary="终于合并了55555">
       <created>1650182907589</created>
@@ -107,7 +112,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -119,51 +124,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="终于合并了55555" />
     <option name="LAST_COMMIT_MESSAGE" value="终于合并了55555" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1650184026562">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1650184026562" />
-    <state x="615" y="342" key="Github.Dialog.Accounts.Choose" timestamp="1650182935920">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="615" y="342" key="Github.Dialog.Accounts.Choose/0.0.1536.864@0.0.1536.864" timestamp="1650182935920" />
-    <state width="1493" height="217" key="GridCell.Tab.0.bottom" timestamp="1650184028740">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="217" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1650184028740" />
-    <state width="1493" height="217" key="GridCell.Tab.0.center" timestamp="1650184028739">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="217" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1650184028739" />
-    <state width="1493" height="217" key="GridCell.Tab.0.left" timestamp="1650184028739">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="217" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1650184028739" />
-    <state width="1493" height="217" key="GridCell.Tab.0.right" timestamp="1650184028740">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="217" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1650184028740" />
-    <state x="270" y="76" key="SettingsEditor" timestamp="1650182715520">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="270" y="76" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1650182715520" />
-    <state x="361" y="161" key="Vcs.Push.Dialog.v2" timestamp="1650182928068">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="361" y="161" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1650182928068" />
-    <state x="524" y="62" key="git4idea.branch.GitSmartOperationDialog" timestamp="1650183587250">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="524" y="62" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.864@0.0.1536.864" timestamp="1650183587250" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1649743958455">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1649743958455" />
   </component>
 </project>
