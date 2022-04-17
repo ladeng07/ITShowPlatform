@@ -1,6 +1,8 @@
 from rest_framework import serializers
+from rest_framework.response import Response
 from rest_framework.validators import UniqueValidator
 from enroll.models import Department, New_member, EmailVerifyRecord
+import time
 
 
 class Department_serializer(serializers.ModelSerializer):
@@ -55,6 +57,23 @@ class Send_email_serializer(serializers.Serializer):
     # code = serializers.CharField(max_length=10)
     email = serializers.EmailField(max_length=50,
                                    validators=[UniqueValidator(
-                                       queryset=New_member.objects.all() and EmailVerifyRecord.objects.all(),
+                                       queryset=New_member.objects.all(),
                                        message="该邮箱已存在")],
                                    error_messages={"max_length": "邮箱过长", "invalid": "请输入正确格式的邮箱"})
+
+    def validate_email(self, data):
+        # print(data)
+        try:
+            oj = EmailVerifyRecord.objects.get(email=data)
+            # print(oj.email)/
+            send_time = str(oj.send_time).split('+')[0].split('.')[0]
+            send_time = time.mktime(time.strptime(send_time, '%Y-%m-%d %X'))
+            now = time.time()
+            # print(f"now={now},send={send_time}")
+            if now - send_time < 120:
+                raise serializers.ValidationError(code="verification_code", detail="请勿频繁发送验证码")
+            else:
+                # print(oj.email)
+                oj.delete()
+        except EmailVerifyRecord.DoesNotExist:
+            pass
