@@ -73,11 +73,12 @@ class Send_email(APIView):
         serializer = Send_email_serializer(data=data)
         ret = serializer.is_valid()
         if ret:
-            serializer.save()
+            # serializer.save()
+            send_code_email(data.get("email"))
+            return Response({"code": 20000, "msg": "成功"})
         else:
             error = {}
             for (i, j) in zip(serializer.errors.keys(), serializer.errors.values()):
                 error[str(i)] = str(j[0])
             return Response({"code": 40000, "msg": error}, status=status.HTTP_400_BAD_REQUEST)
-        send_code_email(data.get("email"))
-        return Response({"code": 20000, "msg": "成功"})
+
