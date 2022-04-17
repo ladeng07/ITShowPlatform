@@ -1,4 +1,4 @@
-from rest_framework.exceptions import ValidationError
+from rest_framework.exceptions import ValidationError, ErrorDetail
 from rest_framework.response import Response
 from rest_framework.generics import GenericAPIView
 from enroll.models import Department, EmailVerifyRecord, New_member
@@ -30,19 +30,25 @@ class Sign_up(GenericAPIView):
         data = request.data
         serializer = self.get_serializer(data=data)
         code = data['verification_code']
-        # print(f"code={code}")
+        print(f"code={code}")
         try:
             if code != EmailVerifyRecord.objects.get(email=data['email']).code:
-                return Response({"verification_code": "邮箱验证码错误"}, status=status.HTTP_400_BAD_REQUEST)
+                return Response({"code": 40000, "msg": {"verification_code": "邮箱验证码错误"}},
+                                status=status.HTTP_400_BAD_REQUEST)
         except EmailVerifyRecord.DoesNotExist:
-            return Response({"verification_code": "请先发送验证码"}, status=status.HTTP_400_BAD_REQUEST)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
+            return Response({"code": 40000, "msg": {"verification_code": "请先发送验证码"}},
+                            status=status.HTTP_400_BAD_REQUEST)
+        ret = serializer.is_valid(raise_exception=False)
+        # serializer.save()
         # print(serializer.errors)
-        # if ret:
-        #     serializer.save()
-        # else:
-        #     print(f"error_messages={serializer.errors}")
+        # ErrorDetail
+        if ret:
+            serializer.save()
+        else:
+            error = {}
+            for (i, j) in zip(serializer.errors.keys(), serializer.errors.values()):
+                error[str(i)] = str(j[0])
+            return Response({"code": 40000, "msg": error}, status=status.HTTP_400_BAD_REQUEST)
         return Response({"code": 20000, "msg": "成功"})
 
     def get(self, request):
@@ -65,6 +71,13 @@ class Send_email(APIView):
     def post(self, request):
         data = request.data
         serializer = Send_email_serializer(data=data)
-        serializer.is_valid(raise_exception=True)
+        ret = serializer.is_valid()
+        if ret:
+            serializer.save()
+        else:
+            error = {}
+            for (i, j) in zip(serializer.errors.keys(), serializer.errors.values()):
+                error[str(i)] = str(j[0])
+            return Response({"code": 40000, "msg": error}, status=status.HTTP_400_BAD_REQUEST)
         send_code_email(data.get("email"))
         return Response({"code": 20000, "msg": "成功"})
