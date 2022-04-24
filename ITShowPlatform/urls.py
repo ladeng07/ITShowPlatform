@@ -19,10 +19,15 @@ from django.views.static import serve
 from ITShowPlatform import settings
 from rest_framework import routers
 
+from history.views import DepartmentViewSet, MemberViewSet, HistoryViewSet
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('comments.urls')),
     path('api/', include('history.urls')),
     path(r'^api-auth/', include('rest_framework.urls')),
     re_path(r'^media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}),
+    path('api/department/', DepartmentViewSet.as_view()),
+    path('api/member/', MemberViewSet.as_view()),
+    path('api/history_list/', HistoryViewSet.as_view()),
 ]
