@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="09d9aecb-2bda-4fc3-b6c8-12f7cda7ceed" name="ITShowPlatform" url="http://101.43.216.170">
+        <fileTransfer accessType="SFTP" host="101.43.216.170" port="22" sshConfigId="76af0150-1401-4711-9b33-6d0785afbecd" sshConfig="root@101.43.216.170:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

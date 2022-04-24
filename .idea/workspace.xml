@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="fix">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ITShowPlatform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ITShowPlatform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITShowPlatform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/urls.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="1c1d4962-1136-4082-abce-379fd2efcfaa" />
+  </component>
+  <component name="ProjectId" id="27v5hLzeA3tTKg74z1HrGlKm4g2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IT_todo" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
   <component name="RunManager">
     <configuration name="ITShowPlatform" type="Python.DjangoServer" factoryName="Django server">
       <module name="ITShowPlatform" />
@@ -7,8 +65,9 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ITShowPlatform.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\PBDELL\Desktop\Django\ITShowPlatform\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -24,5 +83,104 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="" />
+      <created>1650187837343</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650187837343</updated>
+      <workItem from="1650187842307" duration="195000" />
+      <workItem from="1650644639049" duration="97000" />
+      <workItem from="1650644737751" duration="6000" />
+      <workItem from="1650644744696" duration="2432000" />
+      <workItem from="1650650513362" duration="57000" />
+    </task>
+    <task id="LOCAL-00001" summary="fix">
+      <created>1650187914913</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650187914913</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="345" y="76" key="#SSH_Configurations" timestamp="1650645097799">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="345" y="76" key="#SSH_Configurations/0.0.1536.864@0.0.1536.864" timestamp="1650645097799" />
+    <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650644765641">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1650644765641" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1650645368910">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1650645368910" />
+    <state x="615" y="398" key="Gitee.ShareDialog" timestamp="1650650539689">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="615" y="398" key="Gitee.ShareDialog/0.0.1536.864@0.0.1536.864" timestamp="1650650539689" />
+    <state x="615" y="342" key="Github.Dialog.Accounts.Choose" timestamp="1650187937570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="615" y="342" key="Github.Dialog.Accounts.Choose/0.0.1536.864@0.0.1536.864" timestamp="1650187937570" />
+    <state width="1478" height="214" key="GridCell.Tab.0.bottom" timestamp="1650644913378">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1478" height="214" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1650644913378" />
+    <state width="1478" height="214" key="GridCell.Tab.0.center" timestamp="1650644913377">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1478" height="214" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1650644913377" />
+    <state width="1478" height="214" key="GridCell.Tab.0.left" timestamp="1650644913374">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1478" height="214" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1650644913374" />
+    <state width="1478" height="214" key="GridCell.Tab.0.right" timestamp="1650644913377">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1478" height="214" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1650644913377" />
+    <state x="270" y="76" key="SettingsEditor" timestamp="1650645549043">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="270" y="76" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1650645549043" />
+    <state x="361" y="161" key="Vcs.Push.Dialog.v2" timestamp="1650187932255">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="161" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1650187932255" />
+    <state x="563" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1650644703180">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="563" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1650644703180" />
+    <state x="1000" y="164" key="ftp.server.browser" timestamp="1650645530053">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="1000" y="164" key="ftp.server.browser/0.0.1536.864@0.0.1536.864" timestamp="1650645530053" />
   </component>
 </project>
