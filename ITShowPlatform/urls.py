@@ -27,7 +27,4 @@ urlpatterns = [
     path('api/', include('history.urls')),
     path(r'^api-auth/', include('rest_framework.urls')),
     re_path(r'^media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}),
-    path('api/department/', DepartmentViewSet.as_view()),
-    path('api/member/', MemberViewSet.as_view()),
-    path('api/history_list/', HistoryViewSet.as_view()),
 ]
