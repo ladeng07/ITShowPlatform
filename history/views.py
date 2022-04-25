@@ -1,37 +1,90 @@
-import time
-from django.conf import settings
-import re
-from django.shortcuts import render
+from django.http import JsonResponse
 from rest_framework.views import APIView
+from history.serializers import *
 from rest_framework.response import Response
-from .models import History
-from .serializers import HistoryInfoSerializer
-# Create your views here.
+from django.db.models import Q
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
+from django.core.cache import cache
 
 
-class history(APIView):
-
+class DepartmentViewSet(APIView):
+    # 获取部门信息
+    @method_decorator(csrf_exempt)
     def get(self, request):
-        key = []
-        data = {"data": key}
-        for i in range(2012, 2022):
-            temp = {}
-            try:
-                works_set = History.objects.filter(grade=i)
-                if works_set:
-                    serializer = HistoryInfoSerializer(works_set, many=True)
-                    temp['grade'] = i
-                    temp['data'] = serializer.data
-                    data['data'].append(temp)
-            except Exception:
-                pass
-        if len(data['data']) == 0:
-            data['code'] = 40000
-            data['msg'] = "error"
+        response = {
+            "code": 20000,
+            "msg": "成功",
+        }
+        queryset = Department.objects.all().filter(did=request.GET.get('did'))
+        serializer = DepartmentSerializer(queryset, many=True, context={'request': request})
+        try:
+            response["data"] = serializer.data
+        except:
+            response['msg'] = serializer.error_messages
+        if len(response['data']) == 0:
+            response['code'] = 40000
+            response['msg'] = "未返回数据"
         else:
-            data['code'] = 20000
-            data['msg'] = 'success'
-        return Response(data=data)
+            response['code'] = 20000
+            response['msg'] = "成功"
+        return Response(data=response)
 
 
+class MemberViewSet(APIView):
+    # 获取历史成员信息
+    @method_decorator(csrf_exempt)
+    def get(self, request):
+        response = {
+            "code": 20000,
+            "msg": "成功",
+        }
+        grade = request.GET.get('grade')
+        did = request.GET.get('did')
+        try:
+            queryset = Members.objects.all().filter(Q(grade=grade) & Q(did=did))
+            serializer = MembersSerializer(queryset, many=True)
+        except:
+            response = {
+                "code": 40000,
+                "msg": "错误",
+            }
+            return Response(data=response)
+        response["data"] = serializer.data
+        return Response(data=response)
 
+
+class HistoryViewSet(APIView):
+    # 获取历史成员信息
+    @method_decorator(csrf_exempt)
+    def get(self, request):
+        response = {
+            "code": 20000,
+            "msg": "成功",
+        }
+        # queryset = History.objects.all()
+        # serializer = HistorySerializer(queryset, many=True, context={'request': request})
+        # try:
+        #     s = serializer.data
+        # except:
+        #     response['code'] = 40000
+        #     response['msg'] = serializer.error_messages.first()
+        info = []
+        for i in range(2002, 2022):
+            data = {}
+            data['grade'] = i
+            y = []
+            for j in range(0, 6):
+                try:
+                    a = History.objects.get(Q(did=j) & Q(grade=i))
+                except:
+                    continue
+                x = {}
+                x['id'] = a.did
+                x['department_name'] = a.department
+                y.append(x)
+            data['data'] = y
+            info.append(data)
+        response["data"] = info
+        print(response)
+        return Response(data=response)

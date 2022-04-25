@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import History
-# Register your models here.
+from .models import *
 
+
+admin.site.register(Department)
 admin.site.register(History)
+admin.site.register(Members)

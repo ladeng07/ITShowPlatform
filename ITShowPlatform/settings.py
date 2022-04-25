@@ -78,15 +78,14 @@ WSGI_APPLICATION = 'ITShowPlatform.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "ITShowPlatform",
-        'PORT': '3306',
-        'PASSWORD': 'HNXhnx123',
+        'NAME': 'ITStudio',
         'USER': 'root',
-        'HOST': '127.0.0.1'
+        'PASSWORD': 'Kjh030106',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

@@ -19,6 +19,8 @@ from django.views.static import serve
 from ITShowPlatform import settings
 from rest_framework import routers
 
+from history.views import DepartmentViewSet, MemberViewSet, HistoryViewSet
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('v1/api/', include('comments.urls')),
