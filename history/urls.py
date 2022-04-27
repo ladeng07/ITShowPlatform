@@ -6,5 +6,5 @@ from history.views import DepartmentViewSet, MemberViewSet, HistoryViewSet
 urlpatterns = [
     path('department/', DepartmentViewSet.as_view()),
     path('member/', MemberViewSet.as_view()),
-    path('history_list/', HistoryViewSet.as_view()),
+    path('history/', HistoryViewSet.as_view()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

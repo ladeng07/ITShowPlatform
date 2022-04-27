@@ -13,20 +13,29 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:gitee" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:gitee" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:gitee/enroll" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="fix">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ITShowPlatform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ITShowPlatform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="修改+合并前的提交">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITShowPlatform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITShowPlatform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/history/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/history/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +52,9 @@
     <option name="defaultAccountId" value="1c1d4962-1136-4082-abce-379fd2efcfaa" />
   </component>
   <component name="ProjectId" id="27v5hLzeA3tTKg74z1HrGlKm4g2" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
@@ -99,6 +111,10 @@
       <workItem from="1650644737751" duration="6000" />
       <workItem from="1650644744696" duration="2432000" />
       <workItem from="1650650513362" duration="57000" />
+      <workItem from="1650784711228" duration="1215000" />
+      <workItem from="1650790774256" duration="451000" />
+      <workItem from="1650903753930" duration="1368000" />
+      <workItem from="1651065854470" duration="1813000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1650187914913</created>
@@ -107,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650187914913</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改+合并前的提交">
+      <created>1650785005055</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650785005055</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,7 +141,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="gitee/enroll" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -127,7 +162,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="修改+合并前的提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改+合并前的提交" />
   </component>
   <component name="WindowStateProjectService">
     <state x="345" y="76" key="#SSH_Configurations" timestamp="1650645097799">
@@ -138,6 +174,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1650644765641" />
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1650785927137">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1650785927137" />
     <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1650645368910">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -166,6 +206,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1478" height="214" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1650644913377" />
+    <state x="147" y="69" key="MergeDialog" timestamp="1650785054273">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="147" y="69" key="MergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650785054273" />
+    <state x="396" y="185" key="MultipleFileMergeDialog" timestamp="1650903868503">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="396" y="185" key="MultipleFileMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650903868503" />
     <state x="270" y="76" key="SettingsEditor" timestamp="1650645549043">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -174,13 +222,17 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="361" y="161" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1650187932255" />
-    <state x="563" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1650644703180">
+    <state x="563" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1650784772214">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="563" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1650644703180" />
+    <state x="563" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1650784772214" />
     <state x="1000" y="164" key="ftp.server.browser" timestamp="1650645530053">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="1000" y="164" key="ftp.server.browser/0.0.1536.864@0.0.1536.864" timestamp="1650645530053" />
+    <state x="520" y="210" key="git4idea.merge.GitMergeDialog" timestamp="1650785115917">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="520" y="210" key="git4idea.merge.GitMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650785115917" />
   </component>
 </project>

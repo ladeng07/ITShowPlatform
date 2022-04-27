@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('v1/api/', include('comments.urls')),
     path('v1/api/', include('history.urls')),
+    path('v1/api/', include('enroll.urls')),
     path(r'^api-auth/', include('rest_framework.urls')),
     re_path(r'^media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}),
 ]
