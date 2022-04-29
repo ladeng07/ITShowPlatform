@@ -5,7 +5,7 @@
       <paths name="ITShowPlatform">
         <serverdata>
           <mappings>
-            <mapping deploy="/Django/ITShowPlatform" local="$PROJECT_DIR$" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

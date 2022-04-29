@@ -17,10 +17,11 @@ class DepartmentViewSet(APIView):
             "msg": "成功",
         }
         queryset = Department.objects.all().filter(did=request.GET.get('did'))
-        serializer = DepartmentSerializer(queryset, many=True, context={'request': request})
+        serializer = DepartmentSerializer(queryset, many=True)
         try:
             response["data"] = serializer.data
         except:
+            response['code'] = 40000
             response['msg'] = serializer.error_messages
         if len(response['data']) == 0:
             response['code'] = 40000
@@ -42,7 +43,7 @@ class MemberViewSet(APIView):
         grade = request.GET.get('grade')
         did = request.GET.get('did')
         try:
-            queryset = Members.objects.all().filter(Q(grade=grade) & Q(did=did))
+            queryset = Members.objects.all().filter(Q(did=did) & Q(grade=grade))
             serializer = MembersSerializer(queryset, many=True)
         except:
             response = {
@@ -55,36 +56,25 @@ class MemberViewSet(APIView):
 
 
 class HistoryViewSet(APIView):
-    # 获取历史成员信息
+    # 获取历史列表
     @method_decorator(csrf_exempt)
     def get(self, request):
         response = {
             "code": 20000,
             "msg": "成功",
         }
-        # queryset = History.objects.all()
-        # serializer = HistorySerializer(queryset, many=True, context={'request': request})
-        # try:
-        #     s = serializer.data
-        # except:
-        #     response['code'] = 40000
-        #     response['msg'] = serializer.error_messages.first()
         info = []
         for i in range(2002, 2022):
-            data = {}
-            data['grade'] = i
+            data = {'grade': i}
             y = []
             for j in range(0, 6):
                 try:
                     a = History.objects.get(Q(did=j) & Q(grade=i))
                 except:
                     continue
-                x = {}
-                x['id'] = a.did
-                x['department_name'] = a.department
+                x = {'id': a.did, 'department_name': a.department}
                 y.append(x)
             data['data'] = y
             info.append(data)
         response["data"] = info
-        print(response)
         return Response(data=response)
