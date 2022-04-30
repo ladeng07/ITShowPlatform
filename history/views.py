@@ -1,11 +1,9 @@
-from django.http import JsonResponse
 from rest_framework.views import APIView
 from history.serializers import *
 from rest_framework.response import Response
 from django.db.models import Q
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
-from django.core.cache import cache
 
 
 class DepartmentViewSet(APIView):
@@ -16,19 +14,16 @@ class DepartmentViewSet(APIView):
             "code": 20000,
             "msg": "成功",
         }
-        queryset = Department.objects.all().filter(did=request.GET.get('did'))
-        serializer = DepartmentSerializer(queryset, many=True)
-        try:
-            response["data"] = serializer.data
-        except:
-            response['code'] = 40000
-            response['msg'] = serializer.error_messages
-        if len(response['data']) == 0:
-            response['code'] = 40000
-            response['msg'] = "未返回数据"
-        else:
-            response['code'] = 20000
-            response['msg'] = "成功"
+        obj = Department.objects.all().filter(did=request.GET.get('did')).first()
+        d = {'did': obj.did, 'department': obj.department, 'department_en': obj.department_en, 'content': obj.content,
+             'introduction': obj.introduction}
+        serializer = DepartmentSerializer(data=d)
+        if serializer.is_valid():
+            response['data'] = serializer.data
+            return Response(data=response)
+        response['code'] = 40000
+        response['msg'] = "错误"
+        response['data'] = serializer.errors
         return Response(data=response)
 
 
@@ -42,16 +37,22 @@ class MemberViewSet(APIView):
         }
         grade = request.GET.get('grade')
         did = request.GET.get('did')
-        try:
-            queryset = Members.objects.all().filter(Q(did=did) & Q(grade=grade))
-            serializer = MembersSerializer(queryset, many=True)
-        except:
+        queryset = Members.objects.all().filter(Q(did=did) & Q(grade=grade))
+        l = []
+        for x in queryset:
+            d = {'id': x.id, 'did': x.did, 'grade': x.grade, 'department': x.department, 'motto': x.motto,
+                 'name': x.name,
+                 'avatar': str(x.avatar)}
+            serializer = MembersSerializer(data=d)
+            if serializer.is_valid():
+                l.append(d)
+                continue
             response = {
                 "code": 40000,
-                "msg": "错误",
+                "msg": serializer.errors,
             }
             return Response(data=response)
-        response["data"] = serializer.data
+        response['data'] = l
         return Response(data=response)
 
 
@@ -63,6 +64,17 @@ class HistoryViewSet(APIView):
             "code": 20000,
             "msg": "成功",
         }
+        ser = History.objects.all()
+        for x in ser:
+            d = {'did': x.did, 'grade': x.grade, 'department': x.department}
+            serializer = HistorySerializer(data=d)
+            if serializer.is_valid():
+                continue
+            response = {
+                "code": 40000,
+                "msg": serializer.errors,
+            }
+            return Response(data=response)
         info = []
         for i in range(2002, 2022):
             data = {'grade': i}
