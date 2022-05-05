@@ -26,7 +26,7 @@ conf.read(str(BASE_DIR)+r"\ITShowPlatform\config.ini",encoding="utf-8")
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = conf.get("Django","SECRET_KEY")
+SECRET_KEY = 'django-insecure-0cn#v4ei2(^n+txyh4%3d5sllz6mknz#7t$!cq-d!ly*_rwvh2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ["*"]
 
 
 INSTALLED_APPS = [
+    'simpleui',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -19,7 +19,7 @@ class Department(models.Model):
         return self.name
 
 
-class New_member(models.Model):
+class NewMember(models.Model):
     schedules = [
         (0, "尚未提交"),
         (1, "已报名"),

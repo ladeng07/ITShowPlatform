@@ -1,36 +1,45 @@
 from rest_framework.response import Response
 from rest_framework.generics import GenericAPIView
-from Apps.enroll.models import Department, EmailVerifyRecord, New_member
-from Apps.enroll.serializers import Department_serializer, New_member_serializer, New_member_schedule_serializer, \
-    Send_email_serializer
+from Apps.enroll.models import Department, EmailVerifyRecord, NewMember
+from Apps.enroll.serializers import department_serializer, new_member_serializer, new_member_schedule_serializer, \
+    send_email_serializer
 from rest_framework import status
 from rest_framework.views import APIView
 from Apps.enroll.email import send_code_email
+from utils.get_error_msg import get_error_msg
 import re
 import time
 
 
-class Department_message(GenericAPIView):
+class department_message(GenericAPIView):
+    """获取部门信息"""
+
     queryset = Department.objects.all()
-    serializer_class = Department_serializer
+    serializer_class = department_serializer
 
     def get(self, request):
         serializer = self.get_serializer(instance=self.get_queryset(), many=True)
         # print(request.query_params)
         if request.query_params:
-            return Response({"code": 40000, "msg": "请求失败"})
-        return Response({"code": 20000, "msg": "成功", "data": serializer.data}, status=status.HTTP_200_OK)
+            return Response({"code": 40000, "msg": get_error_msg("40000")})
+        return Response({"code": 20000, "msg": get_error_msg("20000"), "data": serializer.data})
 
 
-class Sign_up(GenericAPIView):
-    serializer_class = New_member_serializer
-    queryset = New_member.objects.all()
+class sign_up(GenericAPIView):
+    """
+    新成员报名
+    post:提交新学员信息
+    get:根据邮箱及手机号获取成员录取状态
+    """
+
+    serializer_class = new_member_serializer
+    queryset = NewMember.objects.all()
 
     def post(self, request):
         data = request.data
         serializer = self.get_serializer(data=data)
         code = data['verification_code']
-        print(f"code={code}")
+        # print(f"code={code}")
         try:
             oj = EmailVerifyRecord.objects.get(email=data['email'])
             send_time = str(oj.send_time).split('+')[0].split('.')[0]
@@ -38,18 +47,18 @@ class Sign_up(GenericAPIView):
             now = time.time()
             if now - send_time > 120:
                 return Response(
-                    {"code": 40000, "msg": {"verification_code": "邮箱验证码过期"}},
+                    {"code": 40000, "msg": {"verification_code": get_error_msg(45032)}},
                     status=status.HTTP_400_BAD_REQUEST)
             if code != oj.code:
-                return Response({"code": 40000, "msg": {"verification_code": "邮箱验证码错误"}},
+                return Response({"code": 45032, "msg": {"verification_code": get_error_msg(44031)}},
                                 status=status.HTTP_400_BAD_REQUEST)
         except EmailVerifyRecord.DoesNotExist:
-            return Response({"code": 40000, "msg": {"verification_code": "请先发送验证码"}},
+            return Response({"code": 44032, "msg": {"verification_code": get_error_msg(44032)}},
                             status=status.HTTP_400_BAD_REQUEST)
         ret = serializer.is_valid(raise_exception=False)
         if ret:
             serializer.save()
-            return Response({"code": 20000, "msg": "成功"})
+            return Response({"code": 20000, "msg": get_error_msg(20000)})
         else:
             error = {}
             for (i, j) in zip(serializer.errors.keys(), serializer.errors.values()):
@@ -65,23 +74,25 @@ class Sign_up(GenericAPIView):
                 queryset = self.get_queryset().get(phone_number=string)
             else:
                 queryset = self.get_queryset().get(id=-1)
-        except New_member.DoesNotExist:
-            return Response({"code": 40000, "msg": "信息不存在"})
-        serializer = New_member_schedule_serializer(instance=queryset)
+        except NewMember.DoesNotExist:
+            return Response({"code": 40000, "msg": get_error_msg(45030)})
+        serializer = new_member_schedule_serializer(instance=queryset)
 
-        return Response({"code": 20000, "msg": "查询成功", "data": serializer.data})
+        return Response({"code": 20000, "msg": get_error_msg(20000), "data": serializer.data})
 
 
-class Send_email(APIView):
+class send_email(APIView):
+    """发送邮件"""
+
     def post(self, request):
         data = request.data
-        serializer = Send_email_serializer(data=data)
+        serializer = send_email_serializer(data=data)
         # code_serializer = Code_email_serializer()
         ret = serializer.is_valid()
         if ret:
             # serializer.save()
             send_code_email(data.get("email"))
-            return Response({"code": 20000, "msg": "成功"})
+            return Response({"code": 20000, "msg": get_error_msg(20000)})
         else:
             error = {}
             for (i, j) in zip(serializer.errors.keys(), serializer.errors.values()):
