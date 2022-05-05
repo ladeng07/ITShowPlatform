@@ -51,5 +51,5 @@ class New_memberAdmin(admin.ModelAdmin):
     list_filter = ()
 
 admin.site.register(Department ,DepartmentAdmin)
-admin.site.register(New_member)
+admin.site.register(NewMember)
 admin.site.register(EmailVerifyRecord)

@@ -31,9 +31,18 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="重构了app">
-      <change afterPath="$PROJECT_DIR$/utils/get_error_msg.py" afterDir="false" />
+    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="第一次合并+上线&#10;修改了history路由">
+      <change afterPath="$PROJECT_DIR$/Apps/enroll/email_body" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apps/enroll/migrations/0006_rename_new_member_newmember.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/enroll/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/enroll/email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/enroll/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/enroll/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/enroll/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/enroll/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITShowPlatform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/get_error_msg.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/get_error_msg.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +162,7 @@
       <workItem from="1650790774256" duration="451000" />
       <workItem from="1650903753930" duration="1368000" />
       <workItem from="1651065854470" duration="1813000" />
-      <workItem from="1651738641048" duration="5717000" />
+      <workItem from="1651738641048" duration="4689000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1650187914913</created>
@@ -169,14 +178,7 @@
       <option name="project" value="LOCAL" />
       <updated>1650785005055</updated>
     </task>
-    <task id="LOCAL-00003" summary="重构了app">
-      <created>1651746739401</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1651746739401</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,107 +206,11 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fix" />
     <MESSAGE value="修改+合并前的提交" />
-    <MESSAGE value="重构了app" />
-    <option name="LAST_COMMIT_MESSAGE" value="重构了app" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="460" y="12" key="#ITShowPlatform" timestamp="1651644593580">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="460" y="12" key="#ITShowPlatform/0.0.1536.864@0.0.1536.864" timestamp="1651644593580" />
-    <state x="345" y="76" key="#SSH_Configurations" timestamp="1650645097799">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="345" y="76" key="#SSH_Configurations/0.0.1536.864@0.0.1536.864" timestamp="1650645097799" />
-    <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1651645077454">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1651645077454" />
-    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1650785927137">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1650785927137" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1651739204582">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1651739204582" />
-    <state x="615" y="398" key="Gitee.ShareDialog" timestamp="1650650539689">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="615" y="398" key="Gitee.ShareDialog/0.0.1536.864@0.0.1536.864" timestamp="1650650539689" />
-    <state x="615" y="342" key="Github.Dialog.Accounts.Choose" timestamp="1650187937570">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="615" y="342" key="Github.Dialog.Accounts.Choose/0.0.1536.864@0.0.1536.864" timestamp="1650187937570" />
-    <state width="1493" height="216" key="GridCell.Tab.0.bottom" timestamp="1651746397547">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1651746397546" />
-    <state width="1493" height="216" key="GridCell.Tab.0.center" timestamp="1651746397545">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1651746397545" />
-    <state width="1493" height="216" key="GridCell.Tab.0.left" timestamp="1651746397545">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1651746397545" />
-    <state width="1493" height="216" key="GridCell.Tab.0.right" timestamp="1651746397546">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1651746397546" />
-    <state width="1493" height="269" key="GridCell.Tab.1.bottom" timestamp="1651745777781">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="269" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1651745777781" />
-    <state width="1493" height="269" key="GridCell.Tab.1.center" timestamp="1651745777781">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="269" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1651745777781" />
-    <state width="1493" height="269" key="GridCell.Tab.1.left" timestamp="1651745777781">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="269" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1651745777781" />
-    <state width="1493" height="269" key="GridCell.Tab.1.right" timestamp="1651745777781">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="269" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1651745777781" />
-    <state x="147" y="69" key="MergeDialog" timestamp="1650785054273">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="147" y="69" key="MergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650785054273" />
-    <state x="396" y="185" key="MultipleFileMergeDialog" timestamp="1650903868503">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="396" y="185" key="MultipleFileMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650903868503" />
-    <state x="270" y="76" key="SettingsEditor" timestamp="1651645101984">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="270" y="76" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1651645101984" />
-    <state x="361" y="161" key="Vcs.Push.Dialog.v2" timestamp="1651746748238">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="361" y="161" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1651746748238" />
-    <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1651645036813">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864@0.0.1536.864" timestamp="1651645036813" />
-    <state x="563" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1650784772214">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="563" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1650784772214" />
-    <state x="1000" y="164" key="ftp.server.browser" timestamp="1651644223975">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="1000" y="164" key="ftp.server.browser/0.0.1536.864@0.0.1536.864" timestamp="1651644223975" />
-    <state x="520" y="210" key="git4idea.merge.GitMergeDialog" timestamp="1650785115917">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="520" y="210" key="git4idea.merge.GitMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650785115917" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改+合并前的提交" />
   </component>
 </project>

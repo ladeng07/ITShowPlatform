@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'simpleui',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'Apps.enroll',
     'Apps.history',
     'Apps.comments',
+
 
 ]
 
@@ -82,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ITShowPlatform',
         'USER': 'root',
-        'PASSWORD': 'HNXhnx123',
+        'PASSWORD': '123456',
     }
 }
 
