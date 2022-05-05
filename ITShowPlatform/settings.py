@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Apps.enroll',
     'Apps.history',
     'Apps.comments',
+    'Apps.work',
 
 ]
 
@@ -80,9 +81,11 @@ WSGI_APPLICATION = 'ITShowPlatform.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ITShowPlatform',
+        'NAME': 'It_show',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': 'HNXhnx123',
+        'PASSWORD': 'Qq2442402635*',
     }
 }
 

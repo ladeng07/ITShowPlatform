@@ -13,11 +13,6 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:gitee" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
@@ -25,56 +20,21 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:gitee" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:gitee/enroll" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="第一次合并+上线&#10;修改了history路由">
-      <change afterPath="$PROJECT_DIR$/Apps/history/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apps/history/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/lFUQpbHJ8k.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ITShowPlatform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ITShowPlatform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apps/work/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Apps/work/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/comments/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/comments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITShowPlatform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITShowPlatform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/migrations/0002_alter_new_member_schedule_and_more.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/migrations/0002_alter_new_member_schedule_and_more.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/migrations/0003_alter_new_member_email_alter_new_member_phone_number.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/migrations/0003_alter_new_member_email_alter_new_member_phone_number.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/migrations/0004_alter_emailverifyrecord_send_time.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/migrations/0004_alter_emailverifyrecord_send_time.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/migrations/0005_alter_emailverifyrecord_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/migrations/0005_alter_emailverifyrecord_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/get_error_msg.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/get_error_msg.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,13 +54,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="1c1d4962-1136-4082-abce-379fd2efcfaa" />
-  </component>
   <component name="ProjectId" id="27v5hLzeA3tTKg74z1HrGlKm4g2" />
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
-    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -116,13 +72,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Apps" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../电商项目" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IT_Studio\ITShowPlat\Apps" />
       <recent name="C:\Users\PBDELL\Desktop\Django\ITShowPlatform\Apps" />
     </key>
   </component>
@@ -195,6 +152,7 @@
       <workItem from="1650903753930" duration="1368000" />
       <workItem from="1651065854470" duration="1813000" />
       <workItem from="1651738641048" duration="4689000" />
+      <workItem from="1651753611937" duration="5496000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1650187914913</created>
@@ -227,7 +185,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="gitee/enroll" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -263,10 +221,11 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1650785927137" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1651739204582">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="610" y="222" key="FileChooserDialogImpl" timestamp="1651755367804">
+      <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1651739204582" />
+    <state x="610" y="222" key="FileChooserDialogImpl/0.0.1707.1027@0.0.1707.1027" timestamp="1651755367804" />
     <state x="615" y="398" key="Gitee.ShareDialog" timestamp="1650650539689">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -275,22 +234,26 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="615" y="342" key="Github.Dialog.Accounts.Choose/0.0.1536.864@0.0.1536.864" timestamp="1650187937570" />
-    <state width="1493" height="216" key="GridCell.Tab.0.bottom" timestamp="1651746397547">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1663" height="197" key="GridCell.Tab.0.bottom" timestamp="1651758555771">
+      <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state width="1493" height="216" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1651746397546" />
-    <state width="1493" height="216" key="GridCell.Tab.0.center" timestamp="1651746397545">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1663" height="197" key="GridCell.Tab.0.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1651758555771" />
+    <state width="1663" height="197" key="GridCell.Tab.0.center" timestamp="1651758555771">
+      <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state width="1493" height="216" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1651746397545" />
-    <state width="1493" height="216" key="GridCell.Tab.0.left" timestamp="1651746397545">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1663" height="197" key="GridCell.Tab.0.center/0.0.1707.1027@0.0.1707.1027" timestamp="1651758555771" />
+    <state width="1663" height="197" key="GridCell.Tab.0.left" timestamp="1651758555771">
+      <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state width="1493" height="216" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1651746397545" />
-    <state width="1493" height="216" key="GridCell.Tab.0.right" timestamp="1651746397546">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1663" height="197" key="GridCell.Tab.0.left/0.0.1707.1027@0.0.1707.1027" timestamp="1651758555771" />
+    <state width="1663" height="197" key="GridCell.Tab.0.right" timestamp="1651758555771">
+      <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state width="1493" height="216" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1651746397546" />
+    <state width="1663" height="197" key="GridCell.Tab.0.right/0.0.1707.1027@0.0.1707.1027" timestamp="1651758555771" />
     <state width="1493" height="269" key="GridCell.Tab.1.bottom" timestamp="1651745777781">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -315,14 +278,16 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="396" y="185" key="MultipleFileMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650903868503" />
-    <state x="270" y="76" key="SettingsEditor" timestamp="1651645101984">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="300" y="90" key="SettingsEditor" timestamp="1651754341804">
+      <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="270" y="76" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1651645101984" />
-    <state x="361" y="161" key="Vcs.Push.Dialog.v2" timestamp="1650187932255">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="300" y="90" key="SettingsEditor/0.0.1707.1027@0.0.1707.1027" timestamp="1651754341804" />
+    <state x="401" y="191" key="Vcs.Push.Dialog.v2" timestamp="1651754700403">
+      <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="361" y="161" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1650187932255" />
+    <state x="401" y="191" key="Vcs.Push.Dialog.v2/0.0.1707.1027@0.0.1707.1027" timestamp="1651754700403" />
     <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1651645036813">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -339,5 +304,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="520" y="210" key="git4idea.merge.GitMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650785115917" />
+    <state x="633" y="413" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1651754354143">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="633" y="413" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1651754354143" />
   </component>
 </project>
