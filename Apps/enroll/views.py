@@ -1,11 +1,11 @@
 from rest_framework.response import Response
 from rest_framework.generics import GenericAPIView
-from enroll.models import Department, EmailVerifyRecord, New_member
-from enroll.serializer import Department_serializer, New_member_serializer, New_member_schedule_serializer, \
+from Apps.enroll.models import Department, EmailVerifyRecord, New_member
+from Apps.enroll.serializers import Department_serializer, New_member_serializer, New_member_schedule_serializer, \
     Send_email_serializer
 from rest_framework import status
 from rest_framework.views import APIView
-from enroll.email import send_code_email
+from Apps.enroll.email import send_code_email
 import re
 import time
 

@@ -1,6 +1,6 @@
 from random import Random  # 用于生成随机码
 from django.core.mail import send_mail  # 发送邮件模块
-from enroll.models import EmailVerifyRecord  # 邮箱验证model
+from Apps.enroll.models import EmailVerifyRecord  # 邮箱验证model
 from django.conf import settings  # setting.py添加的的配置信息
 import random
 

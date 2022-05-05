@@ -1,6 +1,6 @@
 import re
 from rest_framework import serializers
-from history.models import *
+from Apps.history import *
 
 
 def validate_department(value):

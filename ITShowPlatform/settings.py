@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'enroll',
-    'history',
-    'comments',
+    'Apps.enroll',
+    'Apps.history',
+    'Apps.comments',
 
 ]
 
@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'ITShowPlatform.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ITStudio',
+        'NAME': 'ITShowPlatform',
         'USER': 'root',
-        'PASSWORD': 'Kjh030106',
+        'PASSWORD': 'HNXhnx123',
     }
 }
 
