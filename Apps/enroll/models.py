@@ -3,6 +3,9 @@ from django.db import models
 
 # Create your models here.
 class Department(models.Model):
+    class Meta:
+        verbose_name_plural = u"部门信息"
+
     # department = [
     #     (0, "系统维护"),
     #     (1, "APP开发"),
@@ -20,6 +23,9 @@ class Department(models.Model):
 
 
 class NewMember(models.Model):
+    class Meta:
+        verbose_name_plural = u"报名信息"
+
     schedules = [
         (0, "尚未提交"),
         (1, "已报名"),
