@@ -31,12 +31,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="测试一下gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/ITShowPlatform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ITShowPlatform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="又一次合并">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITShowPlatform/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITShowPlatform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +183,7 @@
       <workItem from="1651738641048" duration="6482000" />
       <workItem from="1651751601855" duration="3860000" />
       <workItem from="1651755972039" duration="916000" />
-      <workItem from="1651758240545" duration="1554000" />
+      <workItem from="1651758240545" duration="2649000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1650187914913</created>
@@ -223,7 +220,28 @@
       <option name="project" value="LOCAL" />
       <updated>1651756162373</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="gggg">
+      <created>1651762024126</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651762024126</updated>
+    </task>
+    <task id="LOCAL-00007" summary="gggg">
+      <created>1651762310867</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651762310867</updated>
+    </task>
+    <task id="LOCAL-00008" summary="又一次合并">
+      <created>1651762917215</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1651762917215</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +278,9 @@
     <MESSAGE value="重构了app" />
     <MESSAGE value="增加了util里的get_error_msg" />
     <MESSAGE value="测试一下gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试一下gitignore" />
+    <MESSAGE value="gggg" />
+    <MESSAGE value="又一次合并" />
+    <option name="LAST_COMMIT_MESSAGE" value="又一次合并" />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="12" key="#ITShowPlatform" timestamp="1651756623485">
@@ -283,10 +303,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="460" y="19" key="#settings/0.0.1536.864@0.0.1536.864" timestamp="1651756900069" />
-    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1650785927137">
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1651762299499">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1650785927137" />
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1651762299499" />
     <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1651739204582">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -331,18 +351,18 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="269" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1651745777781" />
-    <state x="147" y="69" key="MergeDialog" timestamp="1650785054273">
+    <state x="147" y="69" key="MergeDialog" timestamp="1651762158363">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="147" y="69" key="MergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650785054273" />
-    <state x="396" y="185" key="MultipleFileMergeDialog" timestamp="1650903868503">
+    <state x="147" y="69" key="MergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1651762158363" />
+    <state x="396" y="185" key="MultipleFileMergeDialog" timestamp="1651762158387">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="396" y="185" key="MultipleFileMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650903868503" />
-    <state x="270" y="76" key="SettingsEditor" timestamp="1651753942877">
+    <state x="396" y="185" key="MultipleFileMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1651762158387" />
+    <state x="270" y="76" key="SettingsEditor" timestamp="1651762617403">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="270" y="76" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1651753942877" />
+    <state x="270" y="76" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1651762617403" />
     <state x="361" y="161" key="Vcs.Push.Dialog.v2" timestamp="1651758561741">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -351,6 +371,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864@0.0.1536.864" timestamp="1651645036813" />
+    <state x="549" y="84" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1651761998663">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="84" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.864@0.0.1536.864" timestamp="1651761998663" />
     <state x="563" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1650784772214">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -363,6 +387,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="520" y="210" key="git4idea.merge.GitMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650785115917" />
+    <state x="462" y="205" key="git4idea.merge.GitPullDialog" timestamp="1651762833019">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="462" y="205" key="git4idea.merge.GitPullDialog/0.0.1536.864@0.0.1536.864" timestamp="1651762833019" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ITShowPlatform$settings.coverage" NAME="settings Coverage Results" MODIFIED="1651756900393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ITShowPlatform" />
