@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'Apps.enroll',
     'Apps.history',
     'Apps.comments',
+    'Apps.work',
 
 ]
 

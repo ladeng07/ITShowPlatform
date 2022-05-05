@@ -16,12 +16,13 @@ class CommentsInfo(serializers.ModelSerializer):
         ban = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', "_", "-"]
         for i in ban:
             if i in value:
-                raise serializers.ValidationError(code='40001', detail=get_error_msg(40001))
+                raise serializers.ValidationError(code='40002', detail={'msg': get_error_msg(40002),
+                                                                                  "code": '40002'})
 
         if len(value) > 50:
-            raise serializers.ValidationError(code='40002', detail=get_error_msg(40002))
-        elif len(value) == 0:
             raise serializers.ValidationError(code='40003', detail=get_error_msg(40003))
+        elif len(value) == 0:
+            raise serializers.ValidationError(code='40004', detail=get_error_msg(40004))
 
 
         return value

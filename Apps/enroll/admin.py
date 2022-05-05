@@ -50,6 +50,7 @@ class New_memberAdmin(admin.ModelAdmin):
     '''过滤选项'''
     list_filter = ()
 
+
 admin.site.register(Department ,DepartmentAdmin)
 admin.site.register(NewMember)
-admin.site.register(EmailVerifyRecord)
+
