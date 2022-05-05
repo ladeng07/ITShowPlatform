@@ -31,50 +31,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="第一次合并+上线&#10;修改了history路由">
-      <change afterPath="$PROJECT_DIR$/Apps/history/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apps/history/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/lFUQpbHJ8k.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ITShowPlatform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ITShowPlatform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="重构了app">
+      <change afterPath="$PROJECT_DIR$/utils/get_error_msg.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITShowPlatform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITShowPlatform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/comments/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/migrations/0002_alter_new_member_schedule_and_more.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/migrations/0002_alter_new_member_schedule_and_more.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/migrations/0003_alter_new_member_email_alter_new_member_phone_number.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/migrations/0003_alter_new_member_email_alter_new_member_phone_number.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/migrations/0004_alter_emailverifyrecord_send_time.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/migrations/0004_alter_emailverifyrecord_send_time.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/migrations/0005_alter_emailverifyrecord_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/migrations/0005_alter_emailverifyrecord_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enroll/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/enroll/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/history/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +153,7 @@
       <workItem from="1650790774256" duration="451000" />
       <workItem from="1650903753930" duration="1368000" />
       <workItem from="1651065854470" duration="1813000" />
-      <workItem from="1651738641048" duration="4689000" />
+      <workItem from="1651738641048" duration="5717000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1650187914913</created>
@@ -210,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650785005055</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="重构了app">
+      <created>1651746739401</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651746739401</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +210,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fix" />
     <MESSAGE value="修改+合并前的提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改+合并前的提交" />
+    <MESSAGE value="重构了app" />
+    <option name="LAST_COMMIT_MESSAGE" value="重构了app" />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="12" key="#ITShowPlatform" timestamp="1651644593580">
@@ -319,10 +286,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="270" y="76" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1651645101984" />
-    <state x="361" y="161" key="Vcs.Push.Dialog.v2" timestamp="1650187932255">
+    <state x="361" y="161" key="Vcs.Push.Dialog.v2" timestamp="1651746748238">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="161" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1650187932255" />
+    <state x="361" y="161" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1651746748238" />
     <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1651645036813">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
