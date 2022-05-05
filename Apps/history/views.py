@@ -5,6 +5,9 @@ from django.db.models import Q
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 
+from Apps.history.models import Members, History, Department
+from Apps.history.serializers import MembersSerializer, HistorySerializer, DepartmentSerializer
+
 
 class DepartmentViewSet(APIView):
     # 获取部门信息
@@ -14,16 +17,19 @@ class DepartmentViewSet(APIView):
             "code": 20000,
             "msg": "成功",
         }
-        obj = Department.objects.all().filter(did=request.GET.get('did')).first()
+        obj = Department.objects.all().filter(did=request.GET.get('did')).first()  # 获取符合did的DepartmentObject
+        # （默认每个部门只对应一个object）
         d = {'did': obj.did, 'department': obj.department, 'department_en': obj.department_en, 'content': obj.content,
-             'introduction': obj.introduction}
+             'introduction': obj.introduction}  # 将其转为字典类（用于放入serializer检验）
         serializer = DepartmentSerializer(data=d)
         if serializer.is_valid():
-            response['data'] = serializer.data
+            response['data'] = serializer.data  # 在data里返回想得到的信息
             return Response(data=response)
-        response['code'] = 40000
-        response['msg'] = "错误"
-        response['data'] = serializer.errors
+        key = list(serializer.errors.keys())[0]  # 得到错误信息的keys中的第一个key
+        # 用一个key得到一个错误信息,一个错误信息中的错误码与detail用“-”隔开， 通过split分开
+        value = str(list(serializer.errors.get(key))[0]).split("-")
+        response['code'] = int(value[0])
+        response['msg'] = value[1]
         return Response(data=response)
 
 
@@ -37,20 +43,27 @@ class MemberViewSet(APIView):
         }
         grade = request.GET.get('grade')
         did = request.GET.get('did')
-        queryset = Members.objects.all().filter(Q(did=did) & Q(grade=grade))
-        l = []
+        queryset = Members.objects.all().filter(Q(did=did) & Q(grade=grade))  # 获得所有符合要求的object
+        l = []  # 建一个列表用于存储最终输出的data
+        # 对符合要求的每一个object都转为字典并通过serializer检验数据是否合法
         for x in queryset:
+            avatar = str(x.avatar)
+            if avatar == '':
+                avatar = "default/user.jpg"
+            # 将符合要求的一个object都转为字典
             d = {'id': x.id, 'did': x.did, 'grade': x.grade, 'department': x.department, 'motto': x.motto,
                  'name': x.name,
-                 'avatar': str(x.avatar)}
+                 'avatar': avatar}  # 将路径转为字符串格式
             serializer = MembersSerializer(data=d)
             if serializer.is_valid():
-                l.append(d)
+                l.append(d)  # 将合法数据存入l列表中并继续进行下一个循环
                 continue
-            response = {
-                "code": 40000,
-                "msg": serializer.errors,
-            }
+            # 若出现不合法数据则将错误信息返回前端
+            key = list(serializer.errors.keys())[0]  # 得到错误信息的keys中的第一个key
+            # 用一个key得到一个错误信息,一个错误信息中的错误码与detail用“-”隔开， 通过split分开
+            value = str(list(serializer.errors.get(key))[0]).split("-")
+            response['code'] = int(value[0])
+            response['msg'] = value[1]
             return Response(data=response)
         response['data'] = l
         return Response(data=response)
@@ -64,17 +77,20 @@ class HistoryViewSet(APIView):
             "code": 20000,
             "msg": "成功",
         }
-        ser = History.objects.all()
+        ser = History.objects.all()  # 获取全部历史列表信息
+        # 同上，对每一个object进行判断
         for x in ser:
             d = {'did': x.did, 'grade': x.grade, 'department': x.department}
             serializer = HistorySerializer(data=d)
             if serializer.is_valid():
                 continue
-            response = {
-                "code": 40000,
-                "msg": serializer.errors,
-            }
+            key = list(serializer.errors.keys())[0]  # 得到错误信息的keys中的第一个key
+            # 用一个key得到一个错误信息,一个错误信息中的错误码与detail用“-”隔开， 通过split分开
+            value = str(list(serializer.errors.get(key))[0]).split("-")
+            response['code'] = int(value[0])
+            response['msg'] = value[1]
             return Response(data=response)
+        # 若数据通过判断，则在此处将数据转为要求格式
         info = []
         for i in range(2002, 2022):
             data = {'grade': i}
@@ -82,7 +98,7 @@ class HistoryViewSet(APIView):
             for j in range(0, 6):
                 try:
                     a = History.objects.get(Q(did=j) & Q(grade=i))
-                except:
+                except History.DoesNotExist:  # 若为空，则继续判断下一个部门
                     continue
                 x = {'id': a.did, 'department_name': a.department}
                 y.append(x)

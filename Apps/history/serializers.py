@@ -1,24 +1,25 @@
 import re
 from rest_framework import serializers
 from Apps.history import *
+from Apps.history.models import Department, Members, History
 
 
 def validate_department(value):
     reg = re.compile(r'^[\u4e00-\u9fa5A-Za-z]*$')
     if not reg.match(value):
-        raise serializers.ValidationError("部门名称中只能输入汉字或英文")
+        raise serializers.ValidationError("42011-部门名称中只能输入汉字或英文")
 
 
 def validate_department_en(value):
     reg = re.compile(r'^[A-Za-z][A-Za-z\s]*$')
     if not reg.match(value):
-        raise serializers.ValidationError("部门英文名称中只能输入英文")
+        raise serializers.ValidationError("42010-部门英文名称中只能输入英文")
 
 
 def name_validate(value):
     reg = re.compile(r'^[\u4e00-\u9fa5A-Za-z]*$')
     if not reg.match(value):
-        raise serializers.ValidationError("姓名只能输入汉字或英文")
+        raise serializers.ValidationError("42012-姓名只能输入汉字或英文")
 
 #
 # def validate_avatar(value):
@@ -27,17 +28,18 @@ def name_validate(value):
 
 
 class DepartmentSerializer(serializers.Serializer):
-    did = serializers.IntegerField(required=True, error_messages={"blank": '部门ID不能为空', "invalid": '类型错误'})
+    did = serializers.IntegerField(required=True, error_messages={"blank": '41010-部门ID不能为空', "invalid": '42020-类型错误'})
     department = serializers.CharField(max_length=10, required=True, trim_whitespace=True,
                                        validators=[validate_department],
-                                       error_messages={"max_length": '长度过长', "blank": '部门名称不能为空'})
+                                       error_messages={"max_length": '42021-部门名称长度过长', "blank": '41011-部门名称不能为空'})
     department_en = serializers.CharField(max_length=30, required=True, trim_whitespace=True,
                                           validators=[validate_department_en],
-                                          error_messages={"max_length": '长度过长', "blank": '部门英文名称不能为空'})
+                                          error_messages={"max_length": '42022-部门英文名称长度过长',
+                                                          "blank": '41012-部门英文名称不能为空'})
     content = serializers.CharField(max_length=800, required=True, trim_whitespace=True,
-                                    error_messages={"max_length": '内容过长', "blank": '内容不能为空'})
+                                    error_messages={"max_length": '42023-内容过长', "blank": '41013-内容不能为空'})
     introduction = serializers.CharField(max_length=800, required=True, trim_whitespace=True,
-                                         error_messages={"max_length": '内容过长', "blank": '内容不能为空'})
+                                         error_messages={"max_length": '42024-介绍内容过长', "blank": '41014-介绍内容不能为空'})
 
     # class Meta:
     #     model = Department
@@ -59,15 +61,16 @@ class DepartmentSerializer(serializers.Serializer):
 
 class MembersSerializer(serializers.HyperlinkedModelSerializer):
 
-    did = serializers.IntegerField(required=True, error_messages={"blank": '部门ID不能为空', "invalid": '类型错误'})
+    did = serializers.IntegerField(required=True, error_messages={"blank": '41010-部门ID不能为空', "invalid": '42020-类型错误'})
     department = serializers.CharField(max_length=10, required=True, trim_whitespace=True,
-                                       error_messages={"max_length": '部门名称过长', "blank": '部门名称不能为空'})
+                                       error_messages={"max_length": '42021-部门名称过长', "blank": '41011-部门名称不能为空'})
     grade = serializers.IntegerField(required=True, min_value=2001, max_value=2022,
-                                     error_messages={"max_value": '年级数过大', "blank": "年级数不能为空", "min_value": '年级数过小'})
+                                     error_messages={"max_value": '42025-年级数过大', "blank": "41015-年级数不能为空",
+                                                     "min_value": '42026-年级数过小'})
     name = serializers.CharField(required=True, trim_whitespace=True, max_length=6,
-                                 error_messages={"blank": '姓名不能为空', "max_length": '姓名过长'})
+                                 error_messages={"blank": '41016-姓名不能为空', "max_length": '42027-姓名过长'})
     motto = serializers.CharField(required=False, trim_whitespace=True, max_length=25, validators=[name_validate],
-                                  error_messages={"max_length": '座右铭过长'})
+                                  error_messages={"max_length": '42028-座右铭过长'})
     # avatar = serializers.ImageField(validators=[validate_avatar])
 
     class Meta:
@@ -91,19 +94,24 @@ class MembersSerializer(serializers.HyperlinkedModelSerializer):
 class HistorySerializer(serializers.Serializer):
 
     grade = serializers.IntegerField(required=True, min_value=2001, max_value=2022,
-                                     error_messages={"max_value": '年级数过大', "blank": "年级数不能为空", "min_value": '年级数过小'})
-    did = serializers.IntegerField(required=True, error_messages={"blank": '部门ID不能为空', "invalid": '类型错误'})
+                                     error_messages={"max_value": '42025-年级数过大', "blank": "41015-年级数不能为空",
+                                                     "min_value": '42026-年级数过小'})
+    did = serializers.IntegerField(required=True, error_messages={"blank": '41010-部门ID不能为空', "invalid": '42020-类型错误'})
     department = serializers.CharField(max_length=10, required=True, trim_whitespace=True,
                                        validators=[validate_department],
-                                       error_messages={"max_length": '部门名称过长', "blank": '部门名称不能为空'})
+                                       error_messages={"max_length": '42021-部门名称过长', "blank": '41011-部门名称不能为空'})
 
     # class Meta:
     #     model = History
     #     fields = ('grade', 'did', 'department')
     #
-    # def update(self, instance, validated_data):
-    #     instance.department = validated_data.get("department", instance.department)
-    #     instance.grade = validated_data.get("grade", instance.grade)
-    #     instance.did = validated_data.get("did", instance.did)
-    #     instance.save()
-    #     return instance
+
+    def create(self, validated_data):
+        return History.objects.create(**validated_data)
+
+    def update(self, instance, validated_data):
+        instance.department = validated_data.get("department", instance.department)
+        instance.grade = validated_data.get("grade", instance.grade)
+        instance.did = validated_data.get("did", instance.did)
+        instance.save()
+        return instance
