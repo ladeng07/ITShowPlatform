@@ -7,6 +7,7 @@ from rest_framework.response import Response
 from .models import *
 from .serializers import CommentsInfo
 from django.utils import timezone
+from utils.get_error_msg import get_error_msg
 # Create your views here.
 
 
@@ -21,11 +22,11 @@ class comments(APIView):
         except:
             data['msg'] = serializer.error_messages
         if len(data['data']) == 0:
-            data['msg'] = 'error'
-            data['code'] = "40000"
+            data['msg'] = get_error_msg(40005)
+            data['code'] = 40005
         else:
-            data['msg'] = "success"
-            data['code'] = "20000"
+            data['msg'] = get_error_msg(20000)
+            data['code'] = 20000
         return Response(data=data)
 
 
@@ -34,12 +35,12 @@ class comments(APIView):
         serializer = CommentsInfo(data=request.data)
         if not serializer.is_valid(raise_exception=True):
             data['msg'] = serializer.error_messages
-            data['code'] = "40000"
+            data['code'] = 50000
             return Response(data=data)
         serializer.validated_data['post_time'] = timezone.now().replace(microsecond=0)
         serializer.save()
         data['data'] = serializer.validated_data
         data['msg'] = "success"
-        data['code'] = "20000"
+        data['code'] = 20000
         return Response(data=data)
 
