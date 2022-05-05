@@ -5,6 +5,9 @@ from django.db.models import Q
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 
+from Apps.history.models import Members, History, Department
+from Apps.history.serializers import MembersSerializer, HistorySerializer, DepartmentSerializer
+
 
 class DepartmentViewSet(APIView):
     # 获取部门信息
@@ -44,10 +47,13 @@ class MemberViewSet(APIView):
         l = []  # 建一个列表用于存储最终输出的data
         # 对符合要求的每一个object都转为字典并通过serializer检验数据是否合法
         for x in queryset:
+            avatar = str(x.avatar)
+            if avatar == '':
+                avatar = "default/user.jpg"
             # 将符合要求的一个object都转为字典
             d = {'id': x.id, 'did': x.did, 'grade': x.grade, 'department': x.department, 'motto': x.motto,
                  'name': x.name,
-                 'avatar': str(x.avatar)}  # 将路径转为字符串格式
+                 'avatar': avatar}  # 将路径转为字符串格式
             serializer = MembersSerializer(data=d)
             if serializer.is_valid():
                 l.append(d)  # 将合法数据存入l列表中并继续进行下一个循环
