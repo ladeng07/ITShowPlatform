@@ -1,5 +1,5 @@
 from rest_framework.views import APIView
-from history.serializers import *
+from Apps.history import *
 from rest_framework.response import Response
 from django.db.models import Q
 from django.utils.decorators import method_decorator

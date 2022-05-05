@@ -31,8 +31,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="修改了部门详情的model，&#10;添加了对数据库数据输出前的格式验证">
+    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="完善了一下serializers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/history/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/history/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/history/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/history/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/history/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/history/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/history/views.py" afterDir="false" />
     </list>
@@ -66,7 +68,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Todo" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RunManager">
@@ -118,8 +120,7 @@
       <workItem from="1651235869595" duration="8446000" />
       <workItem from="1651248194966" duration="1722000" />
       <workItem from="1651275393720" duration="5083000" />
-      <workItem from="1651322613788" duration="6853000" />
-      <workItem from="1651741043921" duration="7059000" />
+      <workItem from="1651322613788" duration="6665000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1650187914913</created>
@@ -142,14 +143,7 @@
       <option name="project" value="LOCAL" />
       <updated>1651233809599</updated>
     </task>
-    <task id="LOCAL-00004" summary="修改了部门详情的model，&#10;添加了对数据库数据输出前的格式验证">
-      <created>1651329470523</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1651329470523</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,8 +177,7 @@
     <MESSAGE value="fix" />
     <MESSAGE value="修改+合并前的提交" />
     <MESSAGE value="完善了一下serializers" />
-    <MESSAGE value="修改了部门详情的model，&#10;添加了对数据库数据输出前的格式验证" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了部门详情的model，&#10;添加了对数据库数据输出前的格式验证" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善了一下serializers" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ITShowPlatform$urls.coverage" NAME="urls Coverage Results" MODIFIED="1650768597611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/history" />

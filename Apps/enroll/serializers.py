@@ -1,7 +1,6 @@
 from rest_framework import serializers
-from rest_framework.response import Response
 from rest_framework.validators import UniqueValidator
-from enroll.models import Department, New_member, EmailVerifyRecord
+from Apps.enroll.models import Department, New_member, EmailVerifyRecord
 import time
 
 

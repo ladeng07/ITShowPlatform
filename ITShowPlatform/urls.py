@@ -17,15 +17,12 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 from django.views.static import serve
 from ITShowPlatform import settings
-from rest_framework import routers
-
-from history.views import DepartmentViewSet, MemberViewSet, HistoryViewSet
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('v1/api/', include('comments.urls')),
-    path('v1/api/', include('history.urls')),
-    path('v1/api/', include('enroll.urls')),
+    path('v1/api/', include('Apps.comments.urls')),
+    path('v1/api/', include('Apps.history.urls')),
+    path('v1/api/', include('Apps.enroll.urls')),
     path(r'^api-auth/', include('rest_framework.urls')),
     re_path(r'^media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}),
 ]
