@@ -28,6 +28,7 @@ class DepartmentAdmin(admin.ModelAdmin):
     '''过滤选项'''
     list_filter = ()
 
+
 class New_memberAdmin(admin.ModelAdmin):
     # 定制哪些字段需要展示
     list_display = ('id', 'name', 'picture')
@@ -50,6 +51,7 @@ class New_memberAdmin(admin.ModelAdmin):
     '''过滤选项'''
     list_filter = ()
 
+
 admin.site.register(Department ,DepartmentAdmin)
 admin.site.register(New_member)
-admin.site.register(EmailVerifyRecord)
+

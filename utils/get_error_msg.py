@@ -1,3 +1,4 @@
+
 def get_error_msg(code="20000"):
     error_set = {
         "20000": "成功",

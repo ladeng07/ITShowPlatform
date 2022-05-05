@@ -4,6 +4,9 @@ from django.db import models
 
 
 class Works(models.Model):
+    class Meta:
+        verbose_name_plural=u"部门作品"
+
     grade = models.IntegerField(verbose_name="年份")
     name = models.CharField(verbose_name="事件名称", max_length=30)
     description = models.CharField(verbose_name="事件描述", max_length=200)

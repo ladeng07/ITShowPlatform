@@ -37,6 +37,7 @@ conf.read(str(BASE_DIR)+r"\ITShowPlatform\config.ini",encoding="utf-8")
 
 
 INSTALLED_APPS = [
+    'simpleui',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     'Apps.enroll',
     'Apps.history',
     'Apps.comments',
+    'Apps.work',
 
 ]
 
