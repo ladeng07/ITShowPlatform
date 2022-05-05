@@ -32,20 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="增加了util里的get_error_msg">
-      <change afterPath="$PROJECT_DIR$/ITShowPlatform/config.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITShowPlatform/rule.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/backports/configparser/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/backports/configparser/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/REQUESTED" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITShowPlatform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITShowPlatform/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,6 +181,7 @@
       <workItem from="1651065854470" duration="1813000" />
       <workItem from="1651738641048" duration="6482000" />
       <workItem from="1651751601855" duration="3860000" />
+      <workItem from="1651755972039" duration="103000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1650187914913</created>
