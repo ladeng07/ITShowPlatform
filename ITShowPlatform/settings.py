@@ -17,11 +17,16 @@ import configparser
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+conf = configparser.RawConfigParser()
+
+conf.read(str(BASE_DIR)+r"\ITShowPlatform\config.ini",encoding="utf-8")
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0cn#v4ei2(^n+txyh4%3d5sllz6mknz#7t$!cq-d!ly*_rwvh2'
+SECRET_KEY = conf.get("Django","SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -29,10 +34,6 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 # Application definition
-
-conf = configparser.ConfigParser()
-
-conf.read(str(BASE_DIR)+r"\ITShowPlatform\config.ini",encoding="utf-8")
 
 
 
