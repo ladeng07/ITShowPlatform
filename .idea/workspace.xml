@@ -31,9 +31,21 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="重构了app">
-      <change afterPath="$PROJECT_DIR$/utils/get_error_msg.py" afterDir="false" />
+    <list default="true" id="81247df9-f070-428a-8ff8-85c1a06086e7" name="Default Changelist" comment="增加了util里的get_error_msg">
+      <change afterPath="$PROJECT_DIR$/ITShowPlatform/config.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITShowPlatform/rule.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/backports/configparser/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/backports/configparser/compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/REQUESTED" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser-5.2.0.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/configparser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITShowPlatform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITShowPlatform/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,14 +90,36 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Apps" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PBDELL\Desktop\Django\ITShowPlatform\Apps" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django Server.ITShowPlatform">
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ITShowPlatform" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ITShowPlatform" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ITShowPlatform/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ITShowPlatform" type="Python.DjangoServer" factoryName="Django server">
       <module name="ITShowPlatform" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,6 +167,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.settings" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -153,7 +192,8 @@
       <workItem from="1650790774256" duration="451000" />
       <workItem from="1650903753930" duration="1368000" />
       <workItem from="1651065854470" duration="1813000" />
-      <workItem from="1651738641048" duration="5717000" />
+      <workItem from="1651738641048" duration="6482000" />
+      <workItem from="1651751601855" duration="3860000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1650187914913</created>
@@ -176,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651746739401</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="增加了util里的get_error_msg">
+      <created>1651748255265</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651748255265</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +258,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="修改+合并前的提交" />
     <MESSAGE value="重构了app" />
-    <option name="LAST_COMMIT_MESSAGE" value="重构了app" />
+    <MESSAGE value="增加了util里的get_error_msg" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了util里的get_error_msg" />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="12" key="#ITShowPlatform" timestamp="1651644593580">
@@ -226,6 +274,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1651645077454" />
+    <state x="489" y="228" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1651753494236">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="489" y="228" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1651753494236" />
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1650785927137">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -242,22 +294,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="615" y="342" key="Github.Dialog.Accounts.Choose/0.0.1536.864@0.0.1536.864" timestamp="1650187937570" />
-    <state width="1493" height="216" key="GridCell.Tab.0.bottom" timestamp="1651746397547">
+    <state width="1493" height="216" key="GridCell.Tab.0.bottom" timestamp="1651755221112">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1651746397546" />
-    <state width="1493" height="216" key="GridCell.Tab.0.center" timestamp="1651746397545">
+    <state width="1493" height="216" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1651755221112" />
+    <state width="1493" height="216" key="GridCell.Tab.0.center" timestamp="1651755221111">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1651746397545" />
-    <state width="1493" height="216" key="GridCell.Tab.0.left" timestamp="1651746397545">
+    <state width="1493" height="216" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1651755221111" />
+    <state width="1493" height="216" key="GridCell.Tab.0.left" timestamp="1651755221111">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1651746397545" />
-    <state width="1493" height="216" key="GridCell.Tab.0.right" timestamp="1651746397546">
+    <state width="1493" height="216" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1651755221111" />
+    <state width="1493" height="216" key="GridCell.Tab.0.right" timestamp="1651755221112">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="216" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1651746397546" />
+    <state width="1493" height="216" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1651755221112" />
     <state width="1493" height="269" key="GridCell.Tab.1.bottom" timestamp="1651745777781">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -282,14 +334,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="396" y="185" key="MultipleFileMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650903868503" />
-    <state x="270" y="76" key="SettingsEditor" timestamp="1651645101984">
+    <state x="270" y="76" key="SettingsEditor" timestamp="1651753942877">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="270" y="76" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1651645101984" />
-    <state x="361" y="161" key="Vcs.Push.Dialog.v2" timestamp="1651746748238">
+    <state x="270" y="76" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1651753942877" />
+    <state x="361" y="161" key="Vcs.Push.Dialog.v2" timestamp="1651748975959">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="161" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1651746748238" />
+    <state x="361" y="161" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1651748975959" />
     <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1651645036813">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -306,5 +358,8 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="520" y="210" key="git4idea.merge.GitMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1650785115917" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ITShowPlatform$settings.coverage" NAME="settings Coverage Results" MODIFIED="1651755204349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ITShowPlatform" />
   </component>
 </project>

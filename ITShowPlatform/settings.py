@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import configparser
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,6 +29,12 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 # Application definition
+
+conf = configparser.ConfigParser()
+
+conf.read(str(BASE_DIR)+r"\ITShowPlatform\config.ini",encoding="utf-8")
+
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -79,10 +86,10 @@ WSGI_APPLICATION = 'ITShowPlatform.wsgi.application'
 
 DATABASES = {
      'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ITShowPlatform',
-        'USER': 'root',
-        'PASSWORD': 'HNXhnx123',
+        'ENGINE': conf.get("database","ENGINE"),
+        'NAME': conf.get("database","NAME"),
+        'USER': conf.get("database","USER"),
+        'PASSWORD': conf.get("database","PASSWORD"),
     }
 }
 
@@ -138,9 +145,10 @@ REST_FRAMEWORK = {
     )
 }
 
-EMAIL_HOST = "smtp.qq.com"  # 服务器
-EMAIL_PORT = 465
-EMAIL_HOST_USER = "2302253692@qq.com"  # 账号
-EMAIL_HOST_PASSWORD = "idujbpdlpgbmdhjg"  # 密码 (注意：这里的密码指的是授权码)
-EMAIL_USE_SSL = True  # 一般都为False
-EMAIL_FROM = "2302253692@qq.com"  # 邮箱来自
+EMAIL_HOST = conf.get('email',"EMAIL_HOST")  # 服务器
+EMAIL_PORT = conf.get("email","EMAIL_PORT")
+EMAIL_HOST_USER = conf.get("email","EMAIL_HOST_USER")  # 账号
+EMAIL_HOST_PASSWORD = conf.get("email","EMAIL_HOST_PASSWORD")  # 密码 (注意：这里的密码指的是授权码)
+EMAIL_USE_SSL = conf.get("email","EMAIL_USE_SSL")  # 一般都为False
+EMAIL_FROM = conf.get("email","EMAIL_FROM")  # 邮箱来自
+
