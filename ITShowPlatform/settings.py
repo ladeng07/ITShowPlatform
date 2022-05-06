@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 conf = configparser.RawConfigParser()
 
-conf.read(str(BASE_DIR)+r"\ITShowPlatform\config.ini",encoding="utf-8")
+conf.read(str(BASE_DIR)+r"\config.ini",encoding="utf-8")
 
 
 # Quick-start development settings - unsuitable for production
