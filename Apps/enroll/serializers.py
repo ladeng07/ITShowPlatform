@@ -34,7 +34,7 @@ class NewMemberSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NewMember
-        exclude = ["id", "schedule"]
+        exclude = ["id", "status"]
 
         extra_kwargs = {
             "name": {
@@ -47,6 +47,11 @@ class NewMemberSerializer(serializers.ModelSerializer):
                     "max_length": get_error_msg(42035)
                 }
             },
+            "department": {
+                "error_messages": {
+                    "invalid_choice": get_error_msg(42036)
+                }
+            },
 
         }
 
@@ -56,7 +61,7 @@ class NewMemberScheduleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NewMember
-        fields = ["name", "email", "schedule"]
+        fields = ["name", "email", "status"]
 
 
 class SendEmailSerializer(serializers.Serializer):

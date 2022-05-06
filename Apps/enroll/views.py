@@ -39,24 +39,24 @@ class SignUpView(GenericAPIView):
         data = request.data
         serializer = self.get_serializer(data=data)
         code = data['verification_code']
-        # print(f"code={code}")
-        try:
-            oj = EmailVerifyRecord.objects.get(email=data['email'])
-            send_time = str(oj.send_time).split('+')[0].split('.')[0]
-            send_time = time.mktime(time.strptime(send_time, '%Y-%m-%d %X'))
-            now = time.time()
-            if now - send_time > 120:
-                return Response(
-                    {"code": 40000, "msg": {"verification_code": get_error_msg(45032)}},
-                    status=status.HTTP_400_BAD_REQUEST)
-            if code != oj.code:
-                return Response({"code": 45032, "msg": {"verification_code": get_error_msg(44031)}},
-                                status=status.HTTP_400_BAD_REQUEST)
-        except EmailVerifyRecord.DoesNotExist:
-            return Response({"code": 44032, "msg": {"verification_code": get_error_msg(44032)}},
-                            status=status.HTTP_400_BAD_REQUEST)
         ret = serializer.is_valid(raise_exception=False)
         if ret:
+            # print(f"code={code}")
+            try:
+                oj = EmailVerifyRecord.objects.get(email=data['email'])
+                send_time = str(oj.send_time).split('+')[0].split('.')[0]
+                send_time = time.mktime(time.strptime(send_time, '%Y-%m-%d %X'))
+                now = time.time()
+                if now - send_time > 120:
+                    return Response(
+                        {"code": 40000, "msg": {"verification_code": get_error_msg(45032)}},
+                        status=status.HTTP_400_BAD_REQUEST)
+                if code != oj.code:
+                    return Response({"code": 45031, "msg": {"verification_code": get_error_msg(44031)}},
+                                    status=status.HTTP_400_BAD_REQUEST)
+            except EmailVerifyRecord.DoesNotExist:
+                return Response({"code": 44032, "msg": {"verification_code": get_error_msg(44032)}},
+                                status=status.HTTP_400_BAD_REQUEST)
             serializer.save()
             return Response({"code": 20000, "msg": get_error_msg(20000)})
         else:
