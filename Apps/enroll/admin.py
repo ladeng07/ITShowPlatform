@@ -11,20 +11,22 @@ class DepartmentAdmin(admin.ModelAdmin):
 
     list_editable = ('name', 'picture',)
 
+
     list_per_page = 10
+
 
     list_max_show_all = 200  # default
 
+
     search_fields = ['title']
 
-    # date_hierarchy = 'create_date'
+   # date_hierarchy = 'create_date'
 
     '''默认空值'''
     empty_value_display = 'NA'
 
     '''过滤选项'''
     list_filter = ()
-
 
 class New_memberAdmin(admin.ModelAdmin):
     # 定制哪些字段需要展示
@@ -48,7 +50,6 @@ class New_memberAdmin(admin.ModelAdmin):
     '''过滤选项'''
     list_filter = ()
 
-
-admin.site.register(Department, DepartmentAdmin)
+admin.site.register(Department ,DepartmentAdmin)
 admin.site.register(NewMember)
 # admin.site.register(EmailVerifyRecord)
