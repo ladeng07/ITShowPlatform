@@ -5,7 +5,7 @@ import time
 from utils.get_error_msg import get_error_msg
 
 
-class department_serializer(serializers.ModelSerializer):
+class DepartmentSerializer(serializers.ModelSerializer):
     """获取部门信息"""
 
     class Meta:
@@ -13,7 +13,7 @@ class department_serializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class new_member_serializer(serializers.ModelSerializer):
+class NewMemberSerializer(serializers.ModelSerializer):
     """用于添加新成员时的校验与序列化"""
 
     # verification_code = serializers.CharField(source="verification_code.code")
@@ -51,7 +51,7 @@ class new_member_serializer(serializers.ModelSerializer):
         }
 
 
-class new_member_schedule_serializer(serializers.ModelSerializer):
+class NewMemberScheduleSerializer(serializers.ModelSerializer):
     """获取成员录取状态信息的序列化器"""
 
     class Meta:
@@ -59,7 +59,7 @@ class new_member_schedule_serializer(serializers.ModelSerializer):
         fields = ["name", "email", "schedule"]
 
 
-class send_email_serializer(serializers.Serializer):
+class SendEmailSerializer(serializers.Serializer):
     """发送邮件时校验用序列化器"""
 
     # code = serializers.CharField(max_length=10)

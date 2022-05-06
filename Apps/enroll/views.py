@@ -1,8 +1,8 @@
 from rest_framework.response import Response
 from rest_framework.generics import GenericAPIView
 from Apps.enroll.models import Department, EmailVerifyRecord, NewMember
-from Apps.enroll.serializers import department_serializer, new_member_serializer, new_member_schedule_serializer, \
-    send_email_serializer
+from Apps.enroll.serializers import DepartmentSerializer, NewMemberSerializer, NewMemberScheduleSerializer, \
+    SendEmailSerializer
 from rest_framework import status
 from rest_framework.views import APIView
 from Apps.enroll.email import send_code_email
@@ -11,11 +11,11 @@ import re
 import time
 
 
-class department_message(GenericAPIView):
+class DepartmentMessageView(GenericAPIView):
     """获取部门信息"""
 
     queryset = Department.objects.all()
-    serializer_class = department_serializer
+    serializer_class = DepartmentSerializer
 
     def get(self, request):
         serializer = self.get_serializer(instance=self.get_queryset(), many=True)
@@ -25,14 +25,14 @@ class department_message(GenericAPIView):
         return Response({"code": 20000, "msg": get_error_msg("20000"), "data": serializer.data})
 
 
-class sign_up(GenericAPIView):
+class SignUpView(GenericAPIView):
     """
     新成员报名
     post:提交新学员信息
     get:根据邮箱及手机号获取成员录取状态
     """
 
-    serializer_class = new_member_serializer
+    serializer_class = NewMemberSerializer
     queryset = NewMember.objects.all()
 
     def post(self, request):
@@ -76,17 +76,17 @@ class sign_up(GenericAPIView):
                 queryset = self.get_queryset().get(id=-1)
         except NewMember.DoesNotExist:
             return Response({"code": 40000, "msg": get_error_msg(45030)})
-        serializer = new_member_schedule_serializer(instance=queryset)
+        serializer = NewMemberScheduleSerializer(instance=queryset)
 
         return Response({"code": 20000, "msg": get_error_msg(20000), "data": serializer.data})
 
 
-class send_email(APIView):
+class SendEmailView(APIView):
     """发送邮件"""
 
     def post(self, request):
         data = request.data
-        serializer = send_email_serializer(data=data)
+        serializer = SendEmailSerializer(data=data)
         # code_serializer = Code_email_serializer()
         ret = serializer.is_valid()
         if ret:

@@ -27,27 +27,42 @@ class NewMember(models.Model):
         verbose_name_plural = u"报名信息"
 
     schedules = [
-        (0, "尚未提交"),
         (1, "已报名"),
         (2, "初审中"),
         (3, "面试中"),
         (4, "笔试中"),
         (5, "成功录取"),
-        (-1, "初审失败"),
-        (-2, "面试失败"),
-        (-3, "笔试失败"),
-        (-4, "复试失败"),
-        (-5, "未录取")
+        (6, "初审失败"),
+        (7, "面试失败"),
+        (8, "笔试失败"),
+        (9, "复试失败"),
+        (10, "未录取")
+    ]
+    departments = [
+        (0, "系统维护"),
+        (1, "APP开发"),
+        (2, "Web开发"),
+        (3, "程序开发"),
+        (4, "游戏开发"),
+        (5, "UI设计")
+    ]
+    sex = [
+        (0, "男"),
+        (1, "女"),
+        (2, "保密")
     ]
     name = models.CharField(max_length=20, verbose_name="姓名")
+    sex = models.SmallIntegerField(choices=sex, default=2, verbose_name="性别")
     major = models.CharField(max_length=20, verbose_name="年级专业")
     phone_number = models.CharField(max_length=11, unique=True, verbose_name="手机号码")
     email = models.EmailField(unique=True, verbose_name="邮箱")
-    department = models.CharField(max_length=10, verbose_name="意向部门")
-    expectation = models.CharField(max_length=10, verbose_name="期待的话")
-    schedule = models.SmallIntegerField(choices=schedules, default=0, verbose_name="报名状态")
+    department = models.SmallIntegerField(choices=departments, default=0,
+                                          verbose_name="意向部门")
+    expectation = models.TextField(max_length=200, verbose_name="期待的话")
+    status = models.SmallIntegerField(choices=schedules, default=0, verbose_name="报名状态")
+
     # verification_code = models.ForeignKey("EmailVerifyRecord", on_delete=models.DO_NOTHING, verbose_name="邮箱验证码")
-    verification_code = models.CharField(max_length=4)
+    # verification_code = models.CharField(max_length=4)
 
     def __str__(self):
         return self.name
