@@ -6,7 +6,7 @@ from django.db import models
 #     class Meta:
 #         verbose_name_plural = u"部门信息"
 #
-#     # department = [
+#     # department_cn = [
 #     #     (0, "系统维护"),
 #     #     (1, "APP开发"),
 #     #     (2, "Web开发"),
@@ -14,7 +14,7 @@ from django.db import models
 #     #     (4, "游戏开发"),
 #     #     (5, "UI设计")
 #     # ]
-#     # id = models.IntegerField(verbose_name="部门ID", choices=department, primary_key=True)
+#     # id = models.IntegerField(verbose_name="部门ID", choices=department_cn, primary_key=True)
 #     name = models.CharField(max_length=10, verbose_name="部门名称")
 #     picture = models.ImageField(verbose_name="部门图标")
 #

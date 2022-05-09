@@ -29,7 +29,7 @@ class History(models.Model):
     ])
     # did = models.IntegerField("部门ID")
     # did = models.ForeignKey(Department, on_delete=models.DO_NOTHING(), related_name="history", verbose_name="部门id")
-    # department = models.CharField("部门", max_length=10)  # 如“程序部”
+    # department_cn = models.CharField("部门", max_length=10)  # 如“程序部”
     department = models.ForeignKey(Department, on_delete=models.DO_NOTHING, related_name="history", verbose_name="部门")
 
     class Meta:
@@ -43,11 +43,11 @@ class History(models.Model):
 class Members(models.Model):
     # 默认id作为成员id
     avatar = models.ImageField("头像", upload_to="avatar", blank=True)
-    did = models.IntegerField("所属部门ID", default=0)
+    # did = models.IntegerField("所属部门ID", default=0)
     grade = models.IntegerField("年级")
     name = models.CharField("成员姓名", max_length=10)
     motto = models.CharField("座右铭", max_length=30)
-    # department = models.CharField("所属部门", max_length=10)
+    # department_cn = models.CharField("所属部门", max_length=10)
     department = models.ForeignKey(Department, on_delete=models.DO_NOTHING, related_name="member",
                                    verbose_name="所属部门")
 

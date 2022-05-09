@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
-from apps.enroll.models import Department, NewMember, EmailVerifyRecord
+from apps.enroll.models import NewMember, EmailVerifyRecord
+from apps.history.models import Department
 import time
 from utils.get_error_msg import get_error_msg
 
@@ -10,7 +11,7 @@ class DepartmentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Department
-        fields = "__all__"
+        fields = ["department_cn", "picture"]
 
 
 class NewMemberSerializer(serializers.ModelSerializer):
@@ -47,7 +48,7 @@ class NewMemberSerializer(serializers.ModelSerializer):
                     "max_length": get_error_msg(42035)
                 }
             },
-            "department": {
+            "department_cn": {
                 "error_messages": {
                     "invalid_choice": get_error_msg(42036)
                 }

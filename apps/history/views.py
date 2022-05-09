@@ -19,7 +19,7 @@ class DepartmentViewSet(APIView):
         }
         obj = Department.objects.all().filter(did=request.GET.get('did')).first()  # 获取符合did的DepartmentObject
         # （默认每个部门只对应一个object）
-        d = {'did': obj.did, 'department': obj.department, 'department_en': obj.department_en, 'content': obj.content,
+        d = {'did': obj.did, 'department_cn': obj.department_cn, 'department_en': obj.department_en, 'content': obj.content,
              'introduction': obj.introduction}  # 将其转为字典类（用于放入serializer检验）
         serializer = DepartmentSerializer(data=d)
         if serializer.is_valid():
@@ -51,7 +51,7 @@ class MemberViewSet(APIView):
             if avatar == '':
                 avatar = "default/user.jpg"
             # 将符合要求的一个object都转为字典
-            d = {'id': x.id, 'did': x.did, 'grade': x.grade, 'department': x.department, 'motto': x.motto,
+            d = {'id': x.id, 'did': x.did, 'grade': x.grade, 'department_cn': x.department_cn, 'motto': x.motto,
                  'name': x.name,
                  'avatar': avatar}  # 将路径转为字符串格式
             serializer = MembersSerializer(data=d)
@@ -80,7 +80,7 @@ class HistoryViewSet(APIView):
         ser = History.objects.all()  # 获取全部历史列表信息
         # 同上，对每一个object进行判断
         for x in ser:
-            d = {'did': x.did, 'grade': x.grade, 'department': x.department}
+            d = {'did': x.did, 'grade': x.grade, 'department_cn': x.department_cn}
             serializer = HistorySerializer(data=d)
             if serializer.is_valid():
                 continue
@@ -100,7 +100,7 @@ class HistoryViewSet(APIView):
                     a = History.objects.get(Q(did=j) & Q(grade=i))
                 except History.DoesNotExist:  # 若为空，则继续判断下一个部门
                     continue
-                x = {'id': a.did, 'department_name': a.department}
+                x = {'id': a.did, 'department_name': a.department_cn}
                 y.append(x)
             data['data'] = y
             info.append(data)
