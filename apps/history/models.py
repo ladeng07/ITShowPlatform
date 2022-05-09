@@ -18,7 +18,7 @@ class Department(models.Model):
         verbose_name_plural = '部门详情'
 
     def __str__(self):
-        return self.department
+        return self.department_cn
 
 
 class History(models.Model):
