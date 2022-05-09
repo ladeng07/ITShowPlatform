@@ -1,7 +1,7 @@
 from django.conf.urls.static import static
 from ITShowPlatform import settings
 from django.urls import path
-from Apps.history.views import DepartmentViewSet, MemberViewSet, HistoryViewSet
+from apps.history.views import DepartmentViewSet, MemberViewSet, HistoryViewSet
 
 urlpatterns = [
     path('department/', DepartmentViewSet.as_view()),

@@ -20,10 +20,10 @@ from ITShowPlatform import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('v1/api/', include('Apps.comments.urls')),
-    path('v1/api/', include('Apps.history.urls')),
-    path('v1/api/', include('Apps.enroll.urls')),
-    path('v1/api/', include('Apps.work.urls')),
+    path('v1/api/', include('apps.comments.urls')),
+    path('v1/api/', include('apps.history.urls')),
+    path('v1/api/', include('apps.enroll.urls')),
+    path('v1/api/', include('apps.work.urls')),
     path(r'^api-auth/', include('rest_framework.urls')),
     re_path(r'^media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}),
 ]

@@ -1,8 +1,12 @@
+from pathlib import Path
 from random import Random  # 用于生成随机码
 from django.core.mail import send_mail  # 发送邮件模块
-from Apps.enroll.models import EmailVerifyRecord  # 邮箱验证model
+from apps.enroll.models import EmailVerifyRecord  # 邮箱验证model
 from django.conf import settings  # setting.py添加的的配置信息
 import random
+import os
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # 生成随机字符串
@@ -38,7 +42,8 @@ def send_code_email(email):
     email_title = ""
     email_body = ""
     email_title = "注册激活"
-    file = open("/email_body")
+    # file = open("/email_body")
+    file = open(os.path.join(BASE_DIR, "enroll", "email_body"))
     email_body = str(file.read).format(code)
     # 发送邮件
     send_status = send_mail(email_title, email_body, settings.EMAIL_FROM, [email])

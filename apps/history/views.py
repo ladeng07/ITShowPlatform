@@ -1,12 +1,12 @@
 from rest_framework.views import APIView
-from Apps.history import *
+from apps.history import *
 from rest_framework.response import Response
 from django.db.models import Q
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 
-from Apps.history.models import Members, History, Department
-from Apps.history.serializers import MembersSerializer, HistorySerializer, DepartmentSerializer
+from apps.history.models import Members, History, Department
+from apps.history.serializers import MembersSerializer, HistorySerializer, DepartmentSerializer
 
 
 class DepartmentViewSet(APIView):
