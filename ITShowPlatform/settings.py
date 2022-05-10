@@ -46,10 +46,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'Apps.enroll',
-    'Apps.history',
-    'Apps.comments',
-    'Apps.work',
+    'apps.enroll',
+    'apps.history',
+    'apps.comments',
+    'apps.work',
 
 ]
 
