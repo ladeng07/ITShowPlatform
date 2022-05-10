@@ -6,7 +6,7 @@ from ITShowPlatform import settings
 
 
 urlpatterns = [
-    path('work/', views.work.as_view()),
+    path('work/', views.Work.as_view()),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -7,7 +7,8 @@ from apps.enroll.serializers import DepartmentSerializer, NewMemberSerializer, N
 from rest_framework import status
 from rest_framework.views import APIView
 from apps.enroll.email import send_code_email
-from utils.get_error_msg import get_error_msg
+from django.views.decorators.csrf import csrf_exempt
+from utils.get_msg import get_msg
 import re
 import time
 
@@ -22,8 +23,8 @@ class DepartmentMessageView(GenericAPIView):
         serializer = self.get_serializer(instance=self.get_queryset(), many=True)
         # print(request.query_params)
         if request.query_params:
-            return Response({"code": 40000, "msg": get_error_msg("40000")})
-        return Response({"code": 20000, "msg": get_error_msg("20000"), "data": serializer.data})
+            return Response({"code": 40000, "msg": get_msg("40000")})
+        return Response({"code": 20000, "msg": get_msg("20000"), "data": serializer.data})
 
 
 class SignUpView(GenericAPIView):
@@ -36,6 +37,7 @@ class SignUpView(GenericAPIView):
     serializer_class = NewMemberSerializer
     queryset = NewMember.objects.all()
 
+    @csrf_exempt
     def post(self, request):
         data = request.data
         serializer = self.get_serializer(data=data)
@@ -50,16 +52,16 @@ class SignUpView(GenericAPIView):
                 now = time.time()
                 if now - send_time > 120:
                     return Response(
-                        {"code": 40000, "msg": {"verification_code": get_error_msg(45032)}},
+                        {"code": 40000, "msg": {"verification_code": get_msg(45032)}},
                         status=status.HTTP_400_BAD_REQUEST)
                 if code != oj.code:
-                    return Response({"code": 45031, "msg": {"verification_code": get_error_msg(44031)}},
+                    return Response({"code": 45031, "msg": {"verification_code": get_msg(44031)}},
                                     status=status.HTTP_400_BAD_REQUEST)
             except EmailVerifyRecord.DoesNotExist:
-                return Response({"code": 44032, "msg": {"verification_code": get_error_msg(44032)}},
+                return Response({"code": 44032, "msg": {"verification_code": get_msg(44032)}},
                                 status=status.HTTP_400_BAD_REQUEST)
             serializer.save()
-            return Response({"code": 20000, "msg": get_error_msg(20000)})
+            return Response({"code": 20000, "msg": get_msg(20000)})
         else:
             error = {}
             for (i, j) in zip(serializer.errors.keys(), serializer.errors.values()):
@@ -76,15 +78,16 @@ class SignUpView(GenericAPIView):
             else:
                 queryset = self.get_queryset().get(id=-1)
         except NewMember.DoesNotExist:
-            return Response({"code": 40000, "msg": get_error_msg(45030)})
+            return Response({"code": 40000, "msg": get_msg(45030)})
         serializer = NewMemberScheduleSerializer(instance=queryset)
 
-        return Response({"code": 20000, "msg": get_error_msg(20000), "data": serializer.data})
+        return Response({"code": 20000, "msg": get_msg(20000), "data": serializer.data})
 
 
 class SendEmailView(APIView):
     """发送邮件"""
 
+    @csrf_exempt
     def post(self, request):
         data = request.data
         serializer = SendEmailSerializer(data=data)
@@ -93,7 +96,7 @@ class SendEmailView(APIView):
         if ret:
             # serializer.save()
             send_code_email(data.get("email"))
-            return Response({"code": 20000, "msg": get_error_msg(20000)})
+            return Response({"code": 20000, "msg": get_msg(20000)})
         else:
             error = {}
             for (i, j) in zip(serializer.errors.keys(), serializer.errors.values()):

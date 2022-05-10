@@ -3,7 +3,7 @@ from rest_framework.validators import UniqueValidator
 from apps.enroll.models import NewMember, EmailVerifyRecord
 from apps.history.models import Department
 import time
-from utils.get_error_msg import get_error_msg
+from utils.get_msg import get_msg
 
 
 class DepartmentSerializer(serializers.ModelSerializer):
@@ -21,16 +21,16 @@ class NewMemberSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(validators=[
         UniqueValidator(
             queryset=NewMember.objects.all(),
-            message=get_error_msg(43032)
+            message=get_msg(43032)
         )
     ])
     phone_number = serializers.CharField(validators=[
         UniqueValidator(
             queryset=NewMember.objects.all(),
-            message=get_error_msg(43033)
+            message=get_msg(43033)
         ),
     ],
-        max_length=11, error_messages={"max_length": get_error_msg(42033)}
+        max_length=11, error_messages={"max_length": get_msg(42033)}
     )
 
     class Meta:
@@ -40,17 +40,17 @@ class NewMemberSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             "name": {
                 "error_messages": {
-                    "max_length": get_error_msg(42034)
+                    "max_length": get_msg(42034)
                 }
             },
             "major": {
                 "error_messages": {
-                    "max_length": get_error_msg(42035)
+                    "max_length": get_msg(42035)
                 }
             },
             "department_cn": {
                 "error_messages": {
-                    "invalid_choice": get_error_msg(42036)
+                    "invalid_choice": get_msg(42036)
                 }
             },
 
@@ -72,8 +72,8 @@ class SendEmailSerializer(serializers.Serializer):
     email = serializers.EmailField(max_length=50,
                                    validators=[UniqueValidator(
                                        queryset=NewMember.objects.all(),
-                                       message=get_error_msg(43032))],
-                                   error_messages={"max_length": get_error_msg(42032), "invalid": get_error_msg(44036)})
+                                       message=get_msg(43032))],
+                                   error_messages={"max_length": get_msg(42032), "invalid": get_msg(44036)})
 
     def validate_email(self, data):
 
@@ -85,7 +85,7 @@ class SendEmailSerializer(serializers.Serializer):
             now = time.time()
             # print(f"now={now},send={send_time}")
             if now - send_time < 120:
-                raise serializers.ValidationError(code="verification_code", detail=get_error_msg(44033))
+                raise serializers.ValidationError(code="verification_code", detail=get_msg(44033))
             else:
                 # print(oj.email)
                 oj.delete()

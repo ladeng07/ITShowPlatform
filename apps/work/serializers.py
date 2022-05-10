@@ -11,8 +11,11 @@ class WorksInfoSerializer(serializers.ModelSerializer):
     description = serializers.CharField(label="事件描述", max_length=200, required=True)
     img = serializers.ImageField(label="图片", required=False)
 
-
+    """用来校验传入年级是否符合规范"""
     def validate_grade(self, value):
-        if not (2010 < value <= 2021):
-            raise serializers.ValidationError("不合法输入")
+        if not (2002 < value <= 2021):
+            raise serializers.ValidationError(code='42006', detail={'msg': get_msg(42006),
+                                                                "code": '42006'})
         return value
+
+
