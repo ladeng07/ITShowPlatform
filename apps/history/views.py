@@ -17,9 +17,9 @@ class DepartmentViewSet(APIView):
             "code": 20000,
             "msg": "成功",
         }
-        obj = Department.objects.all().filter(did=request.GET.get('did')).first()  # 获取符合did的DepartmentObject
+        obj = Department.objects.all().filter(id=request.GET.get('did')).first()  # 获取符合did的DepartmentObject
         # （默认每个部门只对应一个object）
-        d = {'did': obj.did, 'department_cn': obj.department_cn, 'department_en': obj.department_en, 'content': obj.content,
+        d = {'did': obj.id, 'department_cn': obj.department_cn, 'department_en': obj.department_en, 'content': obj.content,
              'introduction': obj.introduction}  # 将其转为字典类（用于放入serializer检验）
         serializer = DepartmentSerializer(data=d)
         if serializer.is_valid():
@@ -43,7 +43,7 @@ class MemberViewSet(APIView):
         }
         grade = request.GET.get('grade')
         did = request.GET.get('did')
-        queryset = Members.objects.all().filter(Q(did=did) & Q(grade=grade))  # 获得所有符合要求的object
+        queryset = Members.objects.all().filter(Q(department_id=did) & Q(grade=grade))  # 获得所有符合要求的object
         l = []  # 建一个列表用于存储最终输出的data
         # 对符合要求的每一个object都转为字典并通过serializer检验数据是否合法
         for x in queryset:
@@ -77,10 +77,10 @@ class HistoryViewSet(APIView):
             "code": 20000,
             "msg": "成功",
         }
-        ser = History.objects.all()  # 获取全部历史列表信息
+        history_list = History.objects.all()  # 获取全部历史列表信息
         # 同上，对每一个object进行判断
-        for x in ser:
-            d = {'did': x.did, 'grade': x.grade, 'department_cn': x.department_cn}
+        for x in history_list:
+            d = {'did': x.department_id, 'grade': x.grade, 'department_cn': x.department_cn}
             serializer = HistorySerializer(data=d)
             if serializer.is_valid():
                 continue
@@ -97,10 +97,10 @@ class HistoryViewSet(APIView):
             y = []
             for j in range(0, 6):
                 try:
-                    a = History.objects.get(Q(did=j) & Q(grade=i))
+                    a = History.objects.get(Q(department_id=j) & Q(grade=i))
                 except History.DoesNotExist:  # 若为空，则继续判断下一个部门
                     continue
-                x = {'id': a.did, 'department_name': a.department_cn}
+                x = {'id': a.department_id, 'department_name': a.department_cn}
                 y.append(x)
             data['data'] = y
             info.append(data)
