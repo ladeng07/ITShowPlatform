@@ -3,6 +3,13 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from datetime import datetime
 
 
+GRADE_CHOICES = (
+    (2003, 2003), (2004, 2004), (2005, 2005), (2006, 2006), (2007, 2007), (2008, 2008), (2009, 2009),
+    (2010, 2010), (2011, 2011), (2012, 2012), (2013, 2013), (2014, 2014), (2015, 2015), (2016, 2016),
+    (2017, 2017), (2018, 2018), (2019, 2019), (2020, 2020), (2021, 2021)
+)
+
+
 class Department(models.Model):
     id = models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='部门ID')
     # did = models.IntegerField("部门ID")
@@ -44,7 +51,7 @@ class Members(models.Model):
     # 默认id作为成员id
     avatar = models.ImageField("头像", upload_to="avatar", blank=True)
     # did = models.IntegerField("所属部门ID", default=0)
-    grade = models.IntegerField("年级")
+    grade = models.IntegerField("年级", choices=GRADE_CHOICES)
     name = models.CharField("成员姓名", max_length=10)
     motto = models.CharField("座右铭", max_length=30)
     # department_cn = models.CharField("所属部门", max_length=10)
