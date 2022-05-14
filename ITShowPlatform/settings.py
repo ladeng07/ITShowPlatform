@@ -37,8 +37,8 @@ ALLOWED_HOSTS = ["*"]
 
 
 INSTALLED_APPS = [
-    'corsheaders',
     'simpleui',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -157,6 +157,8 @@ EMAIL_HOST_PASSWORD = conf.get("email","EMAIL_HOST_PASSWORD")  # 密码 (注意�
 EMAIL_USE_SSL = conf.get("email","EMAIL_USE_SSL")  # 一般都为False
 EMAIL_FROM = conf.get("email","EMAIL_FROM")  # 邮箱来自
 
+SIMPLEUI_HOME_INFO = False
+SIMPLEUI_ANALYSIS = False
 
 ADMINS = (
     ('ladeng', '2312936963@qq.com'),

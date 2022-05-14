@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import *
-from utils.get_msg import get_msg
+from utils.util import get_msg
 
 
 class CommentsInfo(serializers.ModelSerializer):

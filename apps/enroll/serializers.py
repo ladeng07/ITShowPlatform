@@ -3,15 +3,14 @@ from rest_framework.validators import UniqueValidator
 from apps.enroll.models import NewMember, EmailVerifyRecord
 from apps.history.models import Department
 import time
-from utils.get_msg import get_msg
+from utils.util import get_msg
 
 
 class DepartmentSerializer(serializers.ModelSerializer):
     """获取部门信息"""
-
     class Meta:
         model = Department
-        fields = ["department_cn", "picture"]
+        fields = ["id","department_cn", "icon"]
 
 
 class NewMemberSerializer(serializers.ModelSerializer):

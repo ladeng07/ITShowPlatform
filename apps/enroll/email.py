@@ -44,7 +44,7 @@ def send_code_email(email):
     email_title = "注册激活"
     # file = open("/email_body")
     file = open(os.path.join(BASE_DIR, "enroll", "email_body"))
-    email_body = str(file.read).format(code)
+    email_body = str(file.read()).format(code)
     # 发送邮件
     send_status = send_mail(email_title, email_body, settings.EMAIL_FROM, [email])
     if not send_status:

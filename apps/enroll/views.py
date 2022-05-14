@@ -8,7 +8,7 @@ from rest_framework import status
 from rest_framework.views import APIView
 from apps.enroll.email import send_code_email
 from django.views.decorators.csrf import csrf_exempt
-from utils.get_msg import get_msg
+from utils.util import get_msg
 import re
 import time
 
@@ -21,7 +21,6 @@ class DepartmentMessageView(GenericAPIView):
 
     def get(self, request):
         serializer = self.get_serializer(instance=self.get_queryset(), many=True)
-        # print(request.query_params)
         if request.query_params:
             return Response({"code": 40000, "msg": get_msg("40000")})
         return Response({"code": 20000, "msg": get_msg("20000"), "data": serializer.data})

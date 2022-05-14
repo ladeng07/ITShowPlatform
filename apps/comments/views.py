@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from .models import *
 from .serializers import CommentsInfo
 from django.utils import timezone
-from utils.get_msg import get_msg
+from utils.util import get_msg
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
