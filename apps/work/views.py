@@ -36,7 +36,8 @@ class Work(GenericAPIView):
                 temp['grade'] = i
                 temp['data'] = serializer.data
                 for i in temp['data']:
-                    i["img"] = get_path() + i["img"]
+                    if i.get("img"):
+                        i["img"] = get_path() + i["img"]
                 data['data'].append(temp)
             # except Exception:
             #    """如果没有查到数据"""

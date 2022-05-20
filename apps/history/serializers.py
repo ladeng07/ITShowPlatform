@@ -116,6 +116,7 @@ class DepartmentSerializer(serializers.ModelSerializer):
         obj = Department.objects.filter(id=data)
         if not obj:
             raise serializers.ValidationError("查询的部门不存在")
+        return data
 
 
 # class MembersSerializer(serializers.HyperlinkedModelSerializer):

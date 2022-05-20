@@ -40,27 +40,35 @@ conf.read(os.path.join(BASE_DIR, "config.ini"), encoding="utf-8")
 
 class DepartmentMessageView(GenericAPIView):
     """获取部门信息"""
+    serializer_class = DepartmentSerializer
+
 
     def get(self, request):
         queryset = Department.objects.all()
 
         if request.query_params:
             try:
+                # serializer = DepartmentSerializer(instance=queryset.get(id=request.query_params['id']))
                 serializer = DepartmentSerializer(instance=queryset.get(id=request.query_params['id']))
-                department_data = dict(serializer.data)
-                department_data["background"] = conf.get("Django", "Host") + department_data["background"]
-                department_data["icon"] = conf.get("Django", "Host") + department_data["icon"]
-                return Response({"code": 20000, "msg": get_msg("20000"), "data": department_data})
+
+                # department_data = dict(serializer.data)
+                # department_data["background"] = conf.get("Django", "Host") + department_data["background"]
+                # department_data["icon"] = conf.get("Django", "Host") + department_data["icon"]
+                # return Response({"code": 20000, "msg": get_msg("20000"), "data": department_data})
+                return Response({"code": 20000, "msg": get_msg("20000"), "data": serializer.data})
+
             except Department.DoesNotExist:
                 return Response({"code": 40000, "msg": "查询部门不存在"})
             # except TypeError:
             #     return Response({"code": 40000, "msg": "查询部门不存在"})
         else:
             serializer = DepartmentSerializer(instance=queryset, many=True)
-            department_data = dict(serializer.data)
-            department_data["background"] = conf.get("Django", "Host") + department_data["background"]
-            department_data["icon"] = conf.get("Django", "Host") + department_data["icon"]
-            return Response({"code": 20000, "msg": get_msg("20000"), "data": department_data})
+            # department_data = dict(serializer.data)
+            # department_data["background"] = conf.get("Django", "Host") + department_data["background"]
+            # department_data["icon"] = conf.get("Django", "Host") + department_data["icon"]
+            # return Response({"code": 20000, "msg": get_msg("20000"), "data": department_data})
+            return Response({"code": 20000, "msg": get_msg("20000"), "data": serializer.data})
+
         # print(request.query_params)
 
 
@@ -138,7 +146,7 @@ class HistoryViewSet(APIView):
             response["code"] = 40000
             response["msg"] = "查询部门不存在"
             return Response(data=response)
-        for i in range(ser.first().years, ser.last().years + 1):
+        for i in range(ser.last().years, ser.first().years - 1, -1):
             msg["years"] = i
             msg["data"] = HistorySerializer(instance=ser.filter(years=i), many=True).data
             data.append(msg.copy())
